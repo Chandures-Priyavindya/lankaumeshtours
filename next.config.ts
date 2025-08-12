@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   
   // IMPORTANT: Set your GitHub repo name here
   basePath: '/lankaumeshtours', // Replace with your actual repo name
-  assetPrefix: '/lankaumeshtours/public/', // Replace with your actual repo name
+  assetPrefix: '/lankaumeshtours', // Replace with your actual repo name
   
   // Disable image optimization for static export
   images: {

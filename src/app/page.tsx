@@ -52,7 +52,7 @@ export default function Home() {
       price: "$899",
       originalPrice: "$1099",
       rating: 4.9,
-      image: "/heritage-tour.webp",
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dtemple%2Bof%2Bthe%2Btooth&psig=AOvVaw2MYwWF5U2qzdB3GLM4BaCp&ust=1755125351252000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJig2smtho8DFQAAAAAdAAAAABAE",
       description: "Explore ancient temples, historic sites, and cultural wonders",
       highlights: ["Sigiriya Rock", "Temple of Tooth", "Dambulla Caves"],
       color: "from-green-500 to-green-600",
