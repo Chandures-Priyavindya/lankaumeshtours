@@ -1,25 +1,31 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Enable static export
+  output: 'export',
+  
+  // IMPORTANT: Set your GitHub repo name here
+  basePath: '/lankaumeshtours', // Replace with your actual repo name
+  assetPrefix: '/lankaumeshtours/', // Replace with your actual repo name
+  
+  // Disable image optimization for static export
+  images: {
+    unoptimized: true,
+    // Alternative: use a custom loader
+    // loader: 'custom',
+    // loaderFile: './src/lib/imageLoader.js'
+  },
+  
   typescript: {
     ignoreBuildErrors: true,
   },
-  // 禁用 Next.js 热重载，由 nodemon 处理重编译
-  reactStrictMode: false,
-  webpack: (config, { dev }) => {
-    if (dev) {
-      // 禁用 webpack 的热模块替换
-      config.watchOptions = {
-        ignored: ['**/*'], // 忽略所有文件变化
-      };
-    }
-    return config;
-  },
+  
   eslint: {
-    // 构建时忽略ESLint错误
     ignoreDuringBuilds: true,
   },
+  
+  // Enable trailing slash for static hosting
+  trailingSlash: true,
 };
 
 export default nextConfig;
