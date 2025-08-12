@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, Star, Calendar, Users, Plane, Camera, Mountain, Beach, Heart, Phone, Mail, MessageSquare, Hotel, Car } from 'lucide-react';
+import { MapPin, Star, Calendar, Users, Plane, Camera, Mountain, Heart, Phone, Mail, MessageSquare, Hotel, Car } from 'lucide-react';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -109,7 +109,7 @@ export default function Home() {
     {
       name: "Sarah Johnson",
       location: "United Kingdom",
-      text: "Amazing experience with ToursLk! Umesh and the team made our Sri Lanka trip unforgettable. Highly recommended!",
+      text: "Amazing experience with lankaumeshtours! Umesh and the team made our Sri Lanka trip unforgettable. Highly recommended!",
       rating: 5
     },
     {
@@ -121,7 +121,7 @@ export default function Home() {
     {
       name: "Emma Williams",
       location: "Australia",
-      text: "Best tourism experience in Sri Lanka. The team is knowledgeable and friendly. Thank you ToursLk!",
+      text: "Best tourism experience in Sri Lanka. The team is knowledgeable and friendly. Thank you lankaumeshtours!",
       rating: 5
     }
   ];
@@ -140,8 +140,8 @@ export default function Home() {
                   className="w-8 h-8 object-contain"
                 />
               </div>
-              <span className="text-2xl font-bold text-gray-800">ToursLk</span>
-              <Badge variant="secondary" className="text-xs">Powered by Umesh</Badge>
+              <span className="text-2xl font-bold text-gray-800">lankaumeshtours</span>
+              
             </div>
             
             <div className="hidden md:flex space-x-8">
@@ -161,9 +161,15 @@ export default function Home() {
               ))}
             </div>
             
-            <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 animate-pulse-glow">
-              Book Now
-            </Button>
+            <Button 
+  className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 animate-pulse-glow"
+  onClick={() => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  }}
+>
+  Book Now
+</Button>
           </div>
         </div>
       </nav>
@@ -189,7 +195,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              Experience unforgettable adventures with ToursLk. Your journey to paradise begins here, powered by Umesh's expertise in creating magical travel experiences.
+              Experience unforgettable adventures with lankaumeshtours. Your journey to paradise begins here, powered by Umesh's expertise in creating magical travel experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-lg px-8 py-4 hover-lift">
@@ -287,9 +293,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-left">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">About ToursLk</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">About lankaumeshtours</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Welcome to ToursLk, your premier travel partner in exploring the magnificent island of Sri Lanka. 
+                Welcome to lankaumeshtours, your premier travel partner in exploring the magnificent island of Sri Lanka. 
                 Founded and powered by Umesh, we bring years of expertise in creating unforgettable travel experiences.
               </p>
               <p className="text-lg text-gray-600 mb-6">
@@ -326,7 +332,7 @@ export default function Home() {
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real experiences from travelers who chose ToursLk
+              Real experiences from travelers who chose lankaumeshtours
             </p>
           </div>
           
@@ -400,11 +406,11 @@ export default function Home() {
                   </div>
                   <div className="flex items-center space-x-3 hover-lift">
                     <Mail className="w-5 h-5 text-green-600 animate-pulse" />
-                    <span>info@tourslk.com</span>
+                    <span>info@lankaumeshtours.com</span>
                   </div>
                   <div className="flex items-center space-x-3 hover-lift">
                     <MapPin className="w-5 h-5 text-red-600 animate-pulse" />
-                    <span>Colombo, Sri Lanka</span>
+                    <span>Koggala, Sri Lanka</span>
                   </div>
                 </CardContent>
               </Card>
@@ -416,15 +422,15 @@ export default function Home() {
                 <CardContent className="space-y-2">
                   <div className="flex justify-between hover-lift">
                     <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
+                    <span>24/7 hours</span>
                   </div>
                   <div className="flex justify-between hover-lift">
                     <span>Saturday</span>
-                    <span>9:00 AM - 4:00 PM</span>
+                    <span>24/7 hours</span>
                   </div>
                   <div className="flex justify-between hover-lift">
                     <span>Sunday</span>
-                    <span>Closed</span>
+                    <span>24/7 hours</span>
                   </div>
                 </CardContent>
               </Card>
@@ -446,7 +452,7 @@ export default function Home() {
                     className="w-6 h-6 object-contain"
                   />
                 </div>
-                <span className="text-xl font-bold">ToursLk</span>
+                <span className="text-xl font-bold">lankaumeshtours</span>
               </div>
               <p className="text-gray-400">
                 Your trusted travel partner in Sri Lanka, powered by Umesh.
@@ -490,7 +496,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 animate-fade-in-up">
-            <p>&copy; 2024 ToursLk. Powered by Umesh. All rights reserved.</p>
+            <p>&copy; 2024 lankaumeshtours. All rights reserved.</p>
           </div>
         </div>
       </footer>
