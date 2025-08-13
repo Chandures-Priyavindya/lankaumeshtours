@@ -1,5 +1,5 @@
 'use client';
-
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,8 +7,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Star, Calendar, Users, Plane, Camera, Mountain, Heart, Phone, Mail, MessageSquare, Hotel, Car, ChevronLeft, ChevronRight, Clock, DollarSign } from 'lucide-react';
+import router from 'next/router';
 
 export default function Home() {
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [currentTourIndex, setCurrentTourIndex] = useState(0);
@@ -47,40 +49,40 @@ export default function Home() {
   const tourPackages = [
     {
       id: 1,
-      name: "Heritage & Culture Explorer",
-      duration: "7 Days",
+      name: "Heritage, Natural & Wildlife",
+      duration: "3 Days | 2 Nights",
       price: "$899",
       originalPrice: "$1099",
       rating: 4.9,
-      image: "/heritage-tour.webp",
-      description: "Explore ancient temples, historic sites, and cultural wonders",
-      highlights: ["Sigiriya Rock", "Temple of Tooth", "Dambulla Caves"],
+      image: "/sigiriya.jpg",
+      description: "Discover Sri Lanka’s timeless treasures, from majestic rock fortresses to misty tea country and wild safaris.",
+      highlights: ["Pickup you Downsouth Hotels","Sigiriya Rock", "Nuwara Eliya", "Udawalawa","Drop you Downsouth Hotels"],
       color: "from-green-500 to-green-600",
       iconColor: "text-green-600"
     },
     {
       id: 2,
-      name: "Beach Paradise Getaway",
-      duration: "5 Days",
+      name: "Heritage and Hill Country tour",
+      duration: "4 Days | 3 Nights",
       price: "$649",
       originalPrice: "$799",
       rating: 4.8,
-      image: "/beach-paradise.webp",
-      description: "Pristine beaches, crystal waters, and tropical sunsets",
-      highlights: ["Mirissa Beach", "Unawatuna Bay", "Whale Watching"],
+      image: "/nuwaraeliya.webp",
+      description: "Explore Sri Lanka’s misty tea hills, scenic Ella, and the wildlife of Udawalawe in a perfect 4-day adventure.",
+      highlights: ["Pickup Colombo Airport(CMB)","Sigiriya", "Nuwara Eliya", "Ella","Udawalawa","Drop Colombo Airport(CMB)"],
       color: "from-green-400 to-green-500",
       iconColor: "text-green-600"
     },
     {
       id: 3,
       name: "Wildlife Adventure Safari",
-      duration: "6 Days",
+      duration: "6 Days | 5 Nights",
       price: "$759",
       originalPrice: "$899",
       rating: 4.7,
       image: "/wildlife-safari.webp",
       description: "Encounter elephants, leopards, and exotic wildlife",
-      highlights: ["Yala National Park", "Elephant Orphanage", "Bird Watching"],
+      highlights: ["Pickup Colombo Airport(CMB)","Anuradhapura","sigiriya","Kandy","Nuwara Eliya","Yala National Park or Udawalawa", "Mirissa", "Drop Colombo Airport(CMB)"],
       color: "from-green-600 to-green-700",
       iconColor: "text-green-600"
     },
@@ -125,10 +127,8 @@ export default function Home() {
   };
 
   const handleTourClick = (tourId: number) => {
-    // Navigation logic will go here
-    console.log(`Navigating to tour ${tourId}`);
-    // You can add your navigation logic here
-    // router.push(`/tours/${tourId}`) or similar
+    // Navigate to tour detail page
+    router.push(`/tours/${tourId}`);
   };
 
   const destinations = [
