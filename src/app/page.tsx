@@ -56,7 +56,7 @@ export default function Home() {
       rating: 4.9,
       image: "/sigiriya.jpg",
       description: "Discover Sri Lanka’s timeless treasures, from majestic rock fortresses to misty tea country and wild safaris.",
-      highlights: ["Pickup you Downsouth Hotels","Sigiriya Rock", "Nuwara Eliya", "Udawalawa","Drop you Downsouth Hotels"],
+      highlights: ["Pickup you Downsouth Hotels","Sigiriya Rock","Nuwara Eliya", "Ella", "Udawalawa","Drop you Downsouth Hotels"],
       color: "from-green-500 to-green-600",
       iconColor: "text-green-600"
     },
