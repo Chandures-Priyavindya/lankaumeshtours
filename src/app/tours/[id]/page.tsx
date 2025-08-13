@@ -82,26 +82,26 @@ const tourPackagesData: TourPackage[] = [
       {
         day: 1,
         title: "Pickup & Nuwara Eliya",
-        description: "Welcome to Sri Lanka! Begin your cultural journey with a comprehensive Colombo city tour.",
+        description: "Welcome to Sri Lanka! Begin your cultural journey.",
         activities: ["Pickup you Downsouth Hotel","Sigiriya Rock","Nuwara Eliya","OverNight at Nuwara Eliya"],
-        meals: ["Lunch", "Dinner"],
-        accommodation: "4-star hotel in Colombo"
+        meals: ["Not Including"],
+        accommodation: "Not Including"
       },
       {
         day: 2,
         title: "Nuwara Eliya to Udawalawa",
         description: "Travel to the Cultural Triangle and explore the magnificent Sigiriya Rock Fortress.",
-        activities: ["Nuwara Eliya Post Office", "Haggala or Victoria Botanical Garden", "Overnight at Udawalawa"],
-        meals: ["Breakfast", "Lunch", "Dinner"],
-        accommodation: "Heritage hotel near Sigiriya"
+        activities: ["Nuwara Eliya Post Office", "Haggala or Victoria Botanical Garden","Ella","Nine Arch Bridge", "Overnight at Udawalawa"],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
       },
       {
         day: 3,
         title: "Morning Udawalawa Safari & Drop your Hotel",
         description: "Discover ancient cave temples and the medieval capital of Sri Lanka.",
         activities: ["Udawalawa Safari"],
-        meals: ["Breakfast", "Lunch", "Dinner"],
-        accommodation: "Heritage hotel in Polonnaruwa"
+        meals: ["Not Including"],
+        accommodation: "Not Including"
       }
     ],
     inclusions: [

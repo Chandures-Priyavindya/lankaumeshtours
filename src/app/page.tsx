@@ -51,7 +51,7 @@ export default function Home() {
       id: 1,
       name: "Heritage, Natural & Wildlife",
       duration: "3 Days | 2 Nights",
-      price: "$899",
+      price: "$150",
       originalPrice: "$1099",
       rating: 4.9,
       image: "/sigiriya.jpg",
