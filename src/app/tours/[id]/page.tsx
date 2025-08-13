@@ -405,7 +405,7 @@ export default function TourDetailPage() {
                     <CardContent className="space-y-3">
                       <Button variant="outline" className="w-full justify-start">
                         <Phone className="w-4 h-4 mr-2" />
-                        Call Us: +94 77 123 4567
+                        Call Us: +94 74 135 9498
                       </Button>
                       <Button variant="outline" className="w-full justify-start">
                         <Mail className="w-4 h-4 mr-2" />
@@ -585,7 +585,7 @@ export default function TourDetailPage() {
                         <h3 className="text-xl font-semibold">Contact Information</h3>
                         <Button className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-lg py-6">
                           <Phone className="w-5 h-5 mr-2" />
-                          Call Now: +94 77 123 4567
+                          Call Now: +94 74 135 9498
                         </Button>
                         <Button variant="outline" className="w-full border-green-300 hover:bg-green-50 text-lg py-6">
                           <Mail className="w-5 h-5 mr-2" />

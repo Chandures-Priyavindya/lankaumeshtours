@@ -687,7 +687,7 @@ export default function Home() {
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3 hover-lift">
                     <Phone className="w-5 h-5 text-blue-600 animate-pulse" />
-                    <span>+94 77 123 4567</span>
+                    <span>+94 74 135 9498</span>
                   </div>
                   <div className="flex items-center space-x-3 hover-lift">
                     <Mail className="w-5 h-5 text-green-600 animate-pulse" />
