@@ -1,19 +1,16 @@
 import type { NextConfig } from "next";
 
+const isExport = process.env.EXPORT === 'true';
+
 const nextConfig: NextConfig = {
-  // Enable static export
-  output: 'export',
+  // Only use static export for deployment
+  ...(isExport && { output: 'export' }),
   
-  // IMPORTANT: Set your GitHub repo name here
-  basePath: '/lankaumeshtours', // Replace with your actual repo name
-  assetPrefix: '/lankaumeshtours', // Replace with your actual repo name
+  basePath: isExport ? '/lankaumeshtours' : '',
+  assetPrefix: isExport ? '/lankaumeshtours/' : '',
   
-  // Disable image optimization for static export
   images: {
-    unoptimized: true,
-    // Alternative: use a custom loader
-    // loader: 'custom',
-    // loaderFile: './src/lib/imageLoader.js'
+    unoptimized: isExport,
   },
   
   typescript: {
@@ -24,8 +21,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   
-  // Enable trailing slash for static hosting
-  trailingSlash: true,
+  trailingSlash: isExport,
 };
 
 export default nextConfig;
