@@ -105,17 +105,19 @@ const tourPackagesData: TourPackage[] = [
       }
     ],
     inclusions: [
-      "Accommodation in 4-star hotels",
-      "All meals as mentioned",
+      
+      "Parking Tickets",
+
       "English-speaking guide",
       "Air-conditioned vehicle",
-      "Entrance fees to attractions",
-      "Airport transfers"
+      
+      
     ],
     exclusions: [
-      "International flights",
+      
       "Personal expenses",
-      "Tips and gratuities",
+      "meals",
+      "Entrance fees to attractions",
       "Travel insurance",
       "Alcoholic beverages",
       "Items not mentioned in inclusions"
