@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -57,10 +57,13 @@ const tourDetails = {
   ]
 };
 
-export default function BookingFormPage() {
+// Create a separate component for the booking form that uses search params
+function BookingFormContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const tourId = searchParams.get('tourId');
+  const tourName = searchParams.get('tourName');
+  const tourPrice = searchParams.get('price');
 
   const [formData, setFormData] = useState<BookingFormData>({
     firstName: '',
@@ -68,7 +71,7 @@ export default function BookingFormPage() {
     country: '',
     email: '',
     telephone: '',
-    tourPackage: tourDetails.name,
+    tourPackage: tourName || tourDetails.name,
     adults: '',
     children: '',
     startDate: undefined,
@@ -387,8 +390,6 @@ export default function BookingFormPage() {
 
           {/* Tour Summary Sidebar */}
           <div className="space-y-6">
-            {/* Selected Tour Card */}
-            
             {/* Contact Information */}
             <Card className="animate-fade-in-right" style={{ animationDelay: '0.2s' }}>
               <CardHeader>
@@ -445,5 +446,75 @@ export default function BookingFormPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Loading component for Suspense fallback
+function BookingFormLoading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
+      <nav className="bg-white shadow-md sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 bg-gray-300 rounded animate-pulse"></div>
+              <div className="w-12 h-4 bg-gray-300 rounded animate-pulse"></div>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gray-300 rounded-lg animate-pulse"></div>
+              <div className="w-32 h-6 bg-gray-300 rounded animate-pulse"></div>
+            </div>
+            <div className="w-32 h-4 bg-gray-300 rounded animate-pulse"></div>
+          </div>
+        </div>
+      </nav>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2">
+            <Card>
+              <CardHeader>
+                <div className="w-48 h-8 bg-gray-300 rounded animate-pulse mb-2"></div>
+                <div className="w-full h-4 bg-gray-300 rounded animate-pulse"></div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  <div className="w-32 h-6 bg-gray-300 rounded animate-pulse"></div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="w-full h-10 bg-gray-300 rounded animate-pulse"></div>
+                    <div className="w-full h-10 bg-gray-300 rounded animate-pulse"></div>
+                  </div>
+                  <div className="w-full h-40 bg-gray-300 rounded animate-pulse"></div>
+                  <div className="w-full h-12 bg-gray-300 rounded animate-pulse"></div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="space-y-6">
+            <Card>
+              <CardHeader>
+                <div className="w-24 h-6 bg-gray-300 rounded animate-pulse"></div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="w-full h-16 bg-gray-300 rounded animate-pulse"></div>
+                  <div className="w-full h-16 bg-gray-300 rounded animate-pulse"></div>
+                  <div className="w-full h-16 bg-gray-300 rounded animate-pulse"></div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Main export component with Suspense boundary
+export default function BookingFormPage() {
+  return (
+    <Suspense fallback={<BookingFormLoading />}>
+      <BookingFormContent />
+    </Suspense>
   );
 }
