@@ -195,13 +195,12 @@ export default function TourDetailPage() {
       </div>
     );
   }
-
   const handleBookNow = () => {
-    setIsBookingModalOpen(true);
-    // Scroll to contact section or open booking modal
-    document.getElementById('booking-section')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
+  // Navigate to booking form with tour details
+  router.push(`/booking?tourId=${tour.id}&tourName=${encodeURIComponent(tour.name)}&price=${encodeURIComponent(tour.price)}`);
+};
+  
+ 
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({

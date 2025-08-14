@@ -114,6 +114,10 @@ export default function Home() {
     }
   ];
 
+  const handleBookNow = () => {
+  router.push('/booking');
+};
+
   const nextTour = () => {
     setCurrentTourIndex((prev) => 
       prev + 4 >= tourPackages.length ? 0 : prev + 1
@@ -251,10 +255,7 @@ export default function Home() {
             
             <Button 
               className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 animate-pulse-glow"
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                contactSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={handleBookNow}
             >
               Book Now
             </Button>
