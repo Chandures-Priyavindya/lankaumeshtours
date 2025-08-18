@@ -54,7 +54,7 @@ export default function Home() {
       price: "$150",
       originalPrice: "$1099",
       rating: 4.9,
-      image: "/sigiriya.jpg",
+      image: "/sigiriya1.jpg",
       description: "Discover Sri Lanka’s timeless treasures, from majestic rock fortresses to misty tea country and wild safaris.",
       highlights: ["Pickup you Downsouth Hotels","Sigiriya Rock","Nuwara Eliya", "Ella", "Udawalawa","Drop you Downsouth Hotels"],
       color: "from-green-500 to-green-600",
@@ -144,17 +144,19 @@ export default function Home() {
   router.push('/booking');
 };
 
+
   const nextTour = () => {
-    setCurrentTourIndex((prev) => 
-      prev + 4 >= tourPackages.length ? 0 : prev + 1
-    );
-  };
+  const maxIndex = Math.max(0, 7); // Maximum index to show 4 cards
+  setCurrentTourIndex((prev) => 
+    prev >= maxIndex ? maxIndex : prev + 1
+  );
+};
 
   const prevTour = () => {
-    setCurrentTourIndex((prev) => 
-      prev === 0 ? Math.max(0, tourPackages.length - 4) : prev - 1
-    );
-  };
+  setCurrentTourIndex((prev) => 
+    prev === 0 ? 0 : prev - 1
+  );
+};
 
   const handleTourClick = (tourId: number) => {
     // Navigate to tour detail page
@@ -347,124 +349,127 @@ export default function Home() {
           
           <div className="relative">
             {/* Navigation Buttons */}
-            <div className="absolute -left-6 top-1/2 transform -translate-y-1/2 z-10">
-              <Button
-                onClick={prevTour}
-                variant="outline"
-                size="icon"
-                className="w-12 h-12 rounded-full bg-white shadow-lg border border-green-200 hover:bg-green-50 hover:border-green-300 hover:scale-110 transition-all duration-300"
-                disabled={currentTourIndex === 0}
-              >
-                <ChevronLeft className="w-6 h-6 text-green-600" />
-              </Button>
-            </div>
-            
-            <div className="absolute -right-6 top-1/2 transform -translate-y-1/2 z-10">
-              <Button
-                onClick={nextTour}
-                variant="outline"
-                size="icon"
-                className="w-12 h-12 rounded-full bg-white shadow-lg border border-green-200 hover:bg-green-50 hover:border-green-300 hover:scale-110 transition-all duration-300"
-                disabled={currentTourIndex + 4 >= tourPackages.length}
-              >
-                <ChevronRight className="w-6 h-6 text-green-600" />
-              </Button>
-            </div>
+            {/* Update the navigation buttons */}
+<div className="absolute -left-6 top-1/2 transform -translate-y-1/2 z-10">
+  <Button
+    onClick={prevTour}
+    variant="outline"
+    size="icon"
+    className="w-12 h-12 rounded-full bg-white shadow-lg border border-green-200 hover:bg-green-50 hover:border-green-300 hover:scale-110 transition-all duration-300"
+    disabled={currentTourIndex === 0}
+  >
+    <ChevronLeft className="w-6 h-6 text-green-600" />
+  </Button>
+</div>
+
+<div className="absolute -right-6 top-1/2 transform -translate-y-1/2 z-10">
+  <Button
+    onClick={nextTour}
+    variant="outline"
+    size="icon"
+    className="w-12 h-12 rounded-full bg-white shadow-lg border border-green-200 hover:bg-green-50 hover:border-green-300 hover:scale-110 transition-all duration-300"
+    disabled={currentTourIndex >= Math.max(0, tourPackages.length)}
+  >
+    <ChevronRight className="w-6 h-6 text-green-600" />
+  </Button>
+</div>
 
             {/* Tour Cards Container */}
-            <div className="overflow-hidden">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out gap-6"
-                style={{ 
-                  transform: `translateX(-${currentTourIndex * 25}%)`,
-                  width: `${(tourPackages.length / 4) * 100}%`
-                }}
-              >
-                {tourPackages.map((tour, index) => (
-                  <Card 
-                    key={tour.id}
-                    onClick={() => handleTourClick(tour.id)}
-                    className={`group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden cursor-pointer hover-lift bg-white border border-green-100 hover:border-green-200 animate-stagger-${(index % 4) + 1}`}
-                    style={{ 
-                      minWidth: 'calc(25% - 18px)',
-                      animationDelay: `${(index % 4) * 0.1}s`
-                    }}
-                  >
-                    <div className="relative h-48 overflow-hidden">
-                      <div className={`absolute inset-0 bg-white-to-r ${tour.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
-                      <img 
-                        src={tour.image} 
-                        alt={tour.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                      
-                      {/* Price Badge */}
-                      <div className="absolute top-4 right-4 space-y-1">
-                        <Badge className={`bg-gradient-to-r ${tour.color} text-white shadow-lg`}>
-                          {tour.price}
-                        </Badge>
-                        {tour.originalPrice && (
-                          <Badge variant="outline" className="bg-white text-gray-600 text-xs line-through border-green-200">
-                            {tour.originalPrice}
-                          </Badge>
-                        )}
-                      </div>
-                      
-                      {/* Duration Badge */}
-                      <div className="absolute top-4 left-4">
-                        <Badge className="bg-white/90 text-green-700 border border-green-200">
-                          <Clock className="w-3 h-3 mr-1" />
-                          {tour.duration}
-                        </Badge>
-                      </div>
-                      
-                      {/* Rating */}
-                      <div className="absolute bottom-4 left-4 flex items-center gap-1 bg-white rounded-full px-2 py-1 shadow-lg border border-green-100">
-                        <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                        <span className="text-xs font-medium text-green-700">{tour.rating}</span>
-                      </div>
-                    </div>
-                    
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg text-gray-800 group-hover:text-green-700 transition-all duration-300">
-                        {tour.name}
-                      </CardTitle>
-                      <CardDescription className="text-sm text-gray-600">
-                        {tour.description}
-                      </CardDescription>
-                    </CardHeader>
-                    
-                    <CardContent className="pt-0">
-                      <div className="space-y-3">
-                        {/* Highlights */}
-                        <div className="space-y-1">
-                          {tour.highlights.slice(0, 2).map((highlight, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-xs text-gray-600">
-                              <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${tour.color}`}></div>
-                              {highlight}
-                            </div>
-                          ))}
-                          {tour.highlights.length > 2 && (
-                            <div className="text-xs text-gray-500">
-                              +{tour.highlights.length - 2} more highlights
-                            </div>
-                          )}
-                        </div>
-                        
-                        {/* Action Button */}
-                        <Button 
-                          size="sm" 
-                          className={`w-full bg-gradient-to-r ${tour.color} hover:shadow-lg hover:scale-105 transition-all duration-300 text-white border-0`}
-                        >
-                          View Details
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+<div className="overflow-hidden">
+  <div 
+    className="flex transition-transform duration-500 ease-in-out gap-6"
+    style={{ 
+      transform: `translateX(-${currentTourIndex * (100 / Math.min( tourPackages.length))}%)`,
+      width: `${Math.max(100, (tourPackages.length * 100) / Math.min( tourPackages.length))}%`
+    }}
+  >
+    {tourPackages.map((tour, index) => (
+      <Card 
+        key={tour.id}
+        onClick={() => handleTourClick(tour.id)}
+        className={`group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden cursor-pointer hover-lift bg-white border border-green-100 hover:border-green-200 animate-stagger-${(index % 4) + 1} flex-shrink-0`}
+        style={{ 
+          width: `${100 / Math.min(4, tourPackages.length)}%`,
+          minWidth: `${100 / Math.min(4, tourPackages.length)}%`,
+          animationDelay: `${(index % 4) * 0.1}s`
+        }}
+      >
+        {/* Rest of your card content remains the same */}
+        <div className="relative h-48 overflow-hidden">
+          <div className={`absolute inset-0 bg-white-to-r ${tour.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
+          <img 
+            src={tour.image} 
+            alt={tour.name}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          
+          {/* Price Badge */}
+          <div className="absolute top-4 right-4 space-y-1">
+            <Badge className={`bg-gradient-to-r ${tour.color} text-white shadow-lg`}>
+              {tour.price}
+            </Badge>
+            {tour.originalPrice && (
+              <Badge variant="outline" className="bg-white text-gray-600 text-xs line-through border-green-200">
+                {tour.originalPrice}
+              </Badge>
+            )}
+          </div>
+          
+          {/* Duration Badge */}
+          <div className="absolute top-4 left-4">
+            <Badge className="bg-white/90 text-green-700 border border-green-200">
+              <Clock className="w-3 h-3 mr-1" />
+              {tour.duration}
+            </Badge>
+          </div>
+          
+          {/* Rating */}
+          <div className="absolute bottom-4 left-4 flex items-center gap-1 bg-white rounded-full px-2 py-1 shadow-lg border border-green-100">
+            <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+            <span className="text-xs font-medium text-green-700">{tour.rating}</span>
+          </div>
+        </div>
+        
+        <CardHeader className="pb-2">
+          <CardTitle className="text-lg text-gray-800 group-hover:text-green-700 transition-all duration-300">
+            {tour.name}
+          </CardTitle>
+          <CardDescription className="text-sm text-gray-600">
+            {tour.description}
+          </CardDescription>
+        </CardHeader>
+        
+        <CardContent className="pt-0">
+          <div className="space-y-3">
+            {/* Highlights */}
+            <div className="space-y-1">
+              {tour.highlights.slice(0, 2).map((highlight, idx) => (
+                <div key={idx} className="flex items-center gap-2 text-xs text-gray-600">
+                  <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${tour.color}`}></div>
+                  {highlight}
+                </div>
+              ))}
+              {tour.highlights.length > 2 && (
+                <div className="text-xs text-gray-500">
+                  +{tour.highlights.length - 2} more highlights
+                </div>
+              )}
             </div>
+            
+            {/* Action Button */}
+            <Button 
+              size="sm" 
+              className={`w-full bg-gradient-to-r ${tour.color} hover:shadow-lg hover:scale-105 transition-all duration-300 text-white border-0`}
+            >
+              View Details
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
             
             {/* Progress Indicators */}
             <div className="flex justify-center mt-8 space-x-2">
