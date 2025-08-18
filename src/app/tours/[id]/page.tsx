@@ -168,7 +168,154 @@ const tourPackagesData: TourPackage[] = [
       "Spa treatments"
     ],
     gallery: ["/beach-1.jpg", "/beach-2.jpg", "/beach-3.jpg", "/beach-4.jpg"]
-  }
+  },
+  // Add this tour object to the tourPackagesData array in src/app/tours/[id]/page.tsx
+// Insert it after the existing tours (around line 90-100)
+
+{
+  id: 3,
+  name: "Wildlife Adventure Safari",
+  duration: "6 Days | 5 Nights", 
+  price: "$759",
+  originalPrice: "$899",
+  rating: 4.7,
+  image: "/wildlife-safari.webp",
+  description: "Encounter elephants, leopards, and exotic wildlife in their natural habitat",
+  highlights: [
+    "Pickup Colombo Airport(CMB)",
+    "Anuradhapura", 
+    "Sigiriya",
+    "Kandy",
+    "Nuwara Eliya",
+    "Yala National Park or Udawalawa",
+    "Mirissa",
+    "Drop Colombo Airport(CMB)"
+  ],
+  color: "from-green-600 to-green-700",
+  iconColor: "text-green-600",
+  longDescription: "Embark on an extraordinary 6-day wildlife adventure across Sri Lanka's most pristine national parks and cultural sites. Start your journey from Colombo Airport and explore the ancient city of Anuradhapura, marvel at the iconic Sigiriya Rock Fortress, discover the cultural heart of Kandy, experience the cool climate of Nuwara Eliya's tea country, witness incredible wildlife at Yala National Park or Udawalawa, and conclude with the beautiful beaches of Mirissa before your departure from Colombo Airport.",
+  groupSize: "2-8 people (Minimum 2 people)",
+  difficulty: "Moderate", 
+  bestTime: "December - March",
+  startLocation: "Colombo Airport (CMB)",
+  endLocation: "Colombo Airport (CMB)",
+  itinerary: [
+    {
+      day: 1,
+      title: "Arrival & Anuradhapura Ancient City",
+      description: "Welcome to Sri Lanka! Begin your adventure with ancient wonders.",
+      activities: [
+        "Airport pickup from Colombo (CMB)",
+        "Drive to Anuradhapura", 
+        "Visit Ruwanwelisaya Stupa",
+        "Explore Jetavanaramaya",
+        "Sri Maha Bodhi Tree visit",
+        "Overnight in Anuradhapura"
+      ],
+      meals: ["Not Including"],
+      accommodation: "Not Including"
+    },
+    {
+      day: 2, 
+      title: "Anuradhapura to Sigiriya",
+      description: "Discover the magnificent rock fortress and its ancient palace ruins.",
+      activities: [
+        "Early morning departure to Sigiriya",
+        "Climb Sigiriya Rock Fortress", 
+        "Explore the ancient palace ruins",
+        "Visit Sigiriya Museum",
+        "Evening village tour",
+        "Overnight in Sigiriya area"
+      ],
+      meals: ["Not Including"],
+      accommodation: "Not Including"
+    },
+    {
+      day: 3,
+      title: "Sigiriya to Kandy via Dambulla",
+      description: "Journey to the cultural capital through the famous cave temples.",
+      activities: [
+        "Visit Dambulla Cave Temple",
+        "Drive to Kandy",
+        "Temple of the Tooth visit",
+        "Kandy Lake walk",
+        "Cultural dance show",
+        "Overnight in Kandy"
+      ],
+      meals: ["Not Including"], 
+      accommodation: "Not Including"
+    },
+    {
+      day: 4,
+      title: "Kandy to Nuwara Eliya",
+      description: "Experience the cool mountain air and lush tea plantations.",
+      activities: [
+        "Royal Botanical Gardens Peradeniya",
+        "Scenic drive to Nuwara Eliya",
+        "Tea factory and plantation visit", 
+        "Nuwara Eliya city tour",
+        "Lake Gregory visit",
+        "Overnight in Nuwara Eliya"
+      ],
+      meals: ["Not Including"],
+      accommodation: "Not Including"
+    },
+    {
+      day: 5,
+      title: "Nuwara Eliya to Yala/Udawalawa",
+      description: "Wildlife safari adventure in one of Sri Lanka's premier national parks.",
+      activities: [
+        "Early morning departure",
+        "Drive to Yala or Udawalawa",
+        "Check-in to safari lodge",
+        "Afternoon wildlife safari",
+        "Spot elephants, leopards, and exotic birds",
+        "Overnight near the national park"
+      ],
+      meals: ["Not Including"],
+      accommodation: "Not Including"
+    },
+    {
+      day: 6,
+      title: "Morning Safari & Departure via Mirissa",
+      description: "Final safari experience and beach relaxation before departure.",
+      activities: [
+        "Early morning safari",
+        "Drive to Mirissa Beach",
+        "Beach relaxation and lunch",
+        "Optional whale watching (seasonal)",
+        "Transfer to Colombo Airport",
+        "Departure"
+      ],
+      meals: ["Not Including"],
+      accommodation: "Not Including"
+    }
+  ],
+  inclusions: [
+    "Airport pickup and drop-off",
+    "Air-conditioned vehicle throughout",
+    "English-speaking driver-guide",
+    "Parking tickets and tolls",
+    "Safari jeep for wildlife tours",
+    "Government taxes"
+  ],
+  exclusions: [
+    "Entrance fees to attractions",
+    "Meals and accommodation", 
+    "Personal expenses",
+    "Travel insurance",
+    "Alcoholic beverages",
+    "Tips and gratuities",
+    "Items not mentioned in inclusions"
+  ],
+  gallery: [
+    "/wildlife-1.jpg", 
+    "/wildlife-2.jpg", 
+    "/wildlife-3.jpg", 
+    "/wildlife-4.jpg"
+  ]
+}
+  
   // Add more tours as needed...
 ];
 
