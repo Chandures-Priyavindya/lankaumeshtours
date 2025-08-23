@@ -136,7 +136,7 @@ Message: ${formData.message}
 `;
 
   // WhatsApp number (without "+" sign)
-  const whatsappNumber = "94715235984";
+  const whatsappNumber = "94741359498";
 
   // Encode the whole message
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

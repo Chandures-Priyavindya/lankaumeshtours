@@ -24,7 +24,9 @@ import {
   Car,
   Heart,
   Share2,
-  Download
+  Download,
+  Menu,
+  X
 } from 'lucide-react';
 
 interface TourPackage {
@@ -58,7 +60,7 @@ interface TourPackage {
   endLocation: string;
 }
 
-// Extended tour data
+// Extended tour data (keeping your existing data structure)
 const tourPackagesData: TourPackage[] = [
   {
     id: 1,
@@ -72,7 +74,7 @@ const tourPackagesData: TourPackage[] = [
     highlights: ["Pickup you Downsouth Hotels","Sigiriya Rock", "Nuwara Eliya","Ella", "Udawalawa","Drop you Downsouth Hotels"],
     color: "from-green-500 to-green-600",
     iconColor: "text-green-600",
-    longDescription: "Embark on a captivating 3-day journey through Sri Lanka’s most enchanting landscapes and cultural treasures. Begin from your down-south hotel and venture to the iconic Sigiriya Rock Fortress, a marvel of ancient engineering and artistry. Travel through the cool, misty hills of Nuwara Eliya, known for its lush tea plantations and colonial charm. Experience the thrill of a wildlife safari in Udawalawe National Park, home to majestic elephants and diverse wildlife, before returning to your down-south hotel with memories to last a lifetime.",
+    longDescription: "Embark on a captivating 3-day journey through Sri Lanka's most enchanting landscapes and cultural treasures. Begin from your down-south hotel and venture to the iconic Sigiriya Rock Fortress, a marvel of ancient engineering and artistry. Travel through the cool, misty hills of Nuwara Eliya, known for its lush tea plantations and colonial charm. Experience the thrill of a wildlife safari in Udawalawe National Park, home to majestic elephants and diverse wildlife, before returning to your down-south hotel with memories to last a lifetime.",
     groupSize: "2-13 people(Minimum 2 people)",
     difficulty: "Easy",
     bestTime: "Any Months",
@@ -105,16 +107,11 @@ const tourPackagesData: TourPackage[] = [
       }
     ],
     inclusions: [
-      
       "Parking Tickets",
-
       "English-speaking guide",
       "Air-conditioned vehicle",
-      
-      
     ],
     exclusions: [
-      
       "Personal expenses",
       "meals",
       "Entrance fees to attractions",
@@ -169,154 +166,149 @@ const tourPackagesData: TourPackage[] = [
     ],
     gallery: ["/beach-1.jpg", "/beach-2.jpg", "/beach-3.jpg", "/beach-4.jpg"]
   },
-  // Add this tour object to the tourPackagesData array in src/app/tours/[id]/page.tsx
-// Insert it after the existing tours (around line 90-100)
-
-{
-  id: 3,
-  name: "Wildlife Adventure Safari",
-  duration: "6 Days | 5 Nights", 
-  price: "$759",
-  originalPrice: "$899",
-  rating: 4.7,
-  image: "/wildlife-safari.webp",
-  description: "Encounter elephants, leopards, and exotic wildlife in their natural habitat",
-  highlights: [
-    "Pickup Colombo Airport(CMB)",
-    "Anuradhapura", 
-    "Sigiriya",
-    "Kandy",
-    "Nuwara Eliya",
-    "Yala National Park or Udawalawa",
-    "Mirissa",
-    "Drop Colombo Airport(CMB)"
-  ],
-  color: "from-green-600 to-green-700",
-  iconColor: "text-green-600",
-  longDescription: "Embark on an extraordinary 6-day wildlife adventure across Sri Lanka's most pristine national parks and cultural sites. Start your journey from Colombo Airport and explore the ancient city of Anuradhapura, marvel at the iconic Sigiriya Rock Fortress, discover the cultural heart of Kandy, experience the cool climate of Nuwara Eliya's tea country, witness incredible wildlife at Yala National Park or Udawalawa, and conclude with the beautiful beaches of Mirissa before your departure from Colombo Airport.",
-  groupSize: "2-8 people (Minimum 2 people)",
-  difficulty: "Moderate", 
-  bestTime: "December - March",
-  startLocation: "Colombo Airport (CMB)",
-  endLocation: "Colombo Airport (CMB)",
-  itinerary: [
-    {
-      day: 1,
-      title: "Arrival & Anuradhapura Ancient City",
-      description: "Welcome to Sri Lanka! Begin your adventure with ancient wonders.",
-      activities: [
-        "Airport pickup from Colombo (CMB)",
-        "Drive to Anuradhapura", 
-        "Visit Ruwanwelisaya Stupa",
-        "Explore Jetavanaramaya",
-        "Sri Maha Bodhi Tree visit",
-        "Overnight in Anuradhapura"
-      ],
-      meals: ["Not Including"],
-      accommodation: "Not Including"
-    },
-    {
-      day: 2, 
-      title: "Anuradhapura to Sigiriya",
-      description: "Discover the magnificent rock fortress and its ancient palace ruins.",
-      activities: [
-        "Early morning departure to Sigiriya",
-        "Climb Sigiriya Rock Fortress", 
-        "Explore the ancient palace ruins",
-        "Visit Sigiriya Museum",
-        "Evening village tour",
-        "Overnight in Sigiriya area"
-      ],
-      meals: ["Not Including"],
-      accommodation: "Not Including"
-    },
-    {
-      day: 3,
-      title: "Sigiriya to Kandy via Dambulla",
-      description: "Journey to the cultural capital through the famous cave temples.",
-      activities: [
-        "Visit Dambulla Cave Temple",
-        "Drive to Kandy",
-        "Temple of the Tooth visit",
-        "Kandy Lake walk",
-        "Cultural dance show",
-        "Overnight in Kandy"
-      ],
-      meals: ["Not Including"], 
-      accommodation: "Not Including"
-    },
-    {
-      day: 4,
-      title: "Kandy to Nuwara Eliya",
-      description: "Experience the cool mountain air and lush tea plantations.",
-      activities: [
-        "Royal Botanical Gardens Peradeniya",
-        "Scenic drive to Nuwara Eliya",
-        "Tea factory and plantation visit", 
-        "Nuwara Eliya city tour",
-        "Lake Gregory visit",
-        "Overnight in Nuwara Eliya"
-      ],
-      meals: ["Not Including"],
-      accommodation: "Not Including"
-    },
-    {
-      day: 5,
-      title: "Nuwara Eliya to Yala/Udawalawa",
-      description: "Wildlife safari adventure in one of Sri Lanka's premier national parks.",
-      activities: [
-        "Early morning departure",
-        "Drive to Yala or Udawalawa",
-        "Check-in to safari lodge",
-        "Afternoon wildlife safari",
-        "Spot elephants, leopards, and exotic birds",
-        "Overnight near the national park"
-      ],
-      meals: ["Not Including"],
-      accommodation: "Not Including"
-    },
-    {
-      day: 6,
-      title: "Morning Safari & Departure via Mirissa",
-      description: "Final safari experience and beach relaxation before departure.",
-      activities: [
-        "Early morning safari",
-        "Drive to Mirissa Beach",
-        "Beach relaxation and lunch",
-        "Optional whale watching (seasonal)",
-        "Transfer to Colombo Airport",
-        "Departure"
-      ],
-      meals: ["Not Including"],
-      accommodation: "Not Including"
-    }
-  ],
-  inclusions: [
-    "Airport pickup and drop-off",
-    "Air-conditioned vehicle throughout",
-    "English-speaking driver-guide",
-    "Parking tickets and tolls",
-    "Safari jeep for wildlife tours",
-    "Government taxes"
-  ],
-  exclusions: [
-    "Entrance fees to attractions",
-    "Meals and accommodation", 
-    "Personal expenses",
-    "Travel insurance",
-    "Alcoholic beverages",
-    "Tips and gratuities",
-    "Items not mentioned in inclusions"
-  ],
-  gallery: [
-    "/wildlife-1.jpg", 
-    "/wildlife-2.jpg", 
-    "/wildlife-3.jpg", 
-    "/wildlife-4.jpg"
-  ]
-}
-  
-  // Add more tours as needed...
+  {
+    id: 3,
+    name: "Wildlife Adventure Safari",
+    duration: "6 Days | 5 Nights", 
+    price: "$759",
+    originalPrice: "$899",
+    rating: 4.7,
+    image: "/wildlife-safari.webp",
+    description: "Encounter elephants, leopards, and exotic wildlife in their natural habitat",
+    highlights: [
+      "Pickup Colombo Airport(CMB)",
+      "Anuradhapura", 
+      "Sigiriya",
+      "Kandy",
+      "Nuwara Eliya",
+      "Yala National Park or Udawalawa",
+      "Mirissa",
+      "Drop Colombo Airport(CMB)"
+    ],
+    color: "from-green-600 to-green-700",
+    iconColor: "text-green-600",
+    longDescription: "Embark on an extraordinary 6-day wildlife adventure across Sri Lanka's most pristine national parks and cultural sites. Start your journey from Colombo Airport and explore the ancient city of Anuradhapura, marvel at the iconic Sigiriya Rock Fortress, discover the cultural heart of Kandy, experience the cool climate of Nuwara Eliya's tea country, witness incredible wildlife at Yala National Park or Udawalawa, and conclude with the beautiful beaches of Mirissa before your departure from Colombo Airport.",
+    groupSize: "2-8 people (Minimum 2 people)",
+    difficulty: "Moderate", 
+    bestTime: "December - March",
+    startLocation: "Colombo Airport (CMB)",
+    endLocation: "Colombo Airport (CMB)",
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival & Anuradhapura Ancient City",
+        description: "Welcome to Sri Lanka! Begin your adventure with ancient wonders.",
+        activities: [
+          "Airport pickup from Colombo (CMB)",
+          "Drive to Anuradhapura", 
+          "Visit Ruwanwelisaya Stupa",
+          "Explore Jetavanaramaya",
+          "Sri Maha Bodhi Tree visit",
+          "Overnight in Anuradhapura"
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      },
+      {
+        day: 2, 
+        title: "Anuradhapura to Sigiriya",
+        description: "Discover the magnificent rock fortress and its ancient palace ruins.",
+        activities: [
+          "Early morning departure to Sigiriya",
+          "Climb Sigiriya Rock Fortress", 
+          "Explore the ancient palace ruins",
+          "Visit Sigiriya Museum",
+          "Evening village tour",
+          "Overnight in Sigiriya area"
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      },
+      {
+        day: 3,
+        title: "Sigiriya to Kandy via Dambulla",
+        description: "Journey to the cultural capital through the famous cave temples.",
+        activities: [
+          "Visit Dambulla Cave Temple",
+          "Drive to Kandy",
+          "Temple of the Tooth visit",
+          "Kandy Lake walk",
+          "Cultural dance show",
+          "Overnight in Kandy"
+        ],
+        meals: ["Not Including"], 
+        accommodation: "Not Including"
+      },
+      {
+        day: 4,
+        title: "Kandy to Nuwara Eliya",
+        description: "Experience the cool mountain air and lush tea plantations.",
+        activities: [
+          "Royal Botanical Gardens Peradeniya",
+          "Scenic drive to Nuwara Eliya",
+          "Tea factory and plantation visit", 
+          "Nuwara Eliya city tour",
+          "Lake Gregory visit",
+          "Overnight in Nuwara Eliya"
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      },
+      {
+        day: 5,
+        title: "Nuwara Eliya to Yala/Udawalawa",
+        description: "Wildlife safari adventure in one of Sri Lanka's premier national parks.",
+        activities: [
+          "Early morning departure",
+          "Drive to Yala or Udawalawa",
+          "Check-in to safari lodge",
+          "Afternoon wildlife safari",
+          "Spot elephants, leopards, and exotic birds",
+          "Overnight near the national park"
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      },
+      {
+        day: 6,
+        title: "Morning Safari & Departure via Mirissa",
+        description: "Final safari experience and beach relaxation before departure.",
+        activities: [
+          "Early morning safari",
+          "Drive to Mirissa Beach",
+          "Beach relaxation and lunch",
+          "Optional whale watching (seasonal)",
+          "Transfer to Colombo Airport",
+          "Departure"
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      }
+    ],
+    inclusions: [
+      "Airport pickup and drop-off",
+      "Air-conditioned vehicle throughout",
+      "English-speaking driver-guide",
+      "Parking tickets and tolls",
+      "Safari jeep for wildlife tours",
+      "Government taxes"
+    ],
+    exclusions: [
+      "Entrance fees to attractions",
+      "Meals and accommodation", 
+      "Personal expenses",
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Tips and gratuities",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: [
+      "/wildlife-1.jpg", 
+      "/wildlife-2.jpg", 
+      "/wildlife-3.jpg", 
+      "/wildlife-4.jpg"
+    ]
+  }
 ];
 
 export default function TourDetailPage() {
@@ -324,7 +316,8 @@ export default function TourDetailPage() {
   const router = useRouter();
   const [tour, setTour] = useState<TourPackage | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     const tourId = parseInt(params.id as string);
@@ -334,7 +327,7 @@ export default function TourDetailPage() {
 
   if (!tour) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center px-4">
         <div className="text-center animate-fade-in-up">
           <div className="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600">Loading tour details...</p>
@@ -342,12 +335,11 @@ export default function TourDetailPage() {
       </div>
     );
   }
+
   const handleBookNow = () => {
-  // Navigate to booking form with tour details
-  router.push(`/booking?tourId=${tour.id}&tourName=${encodeURIComponent(tour.name)}&price=${encodeURIComponent(tour.price)}`);
-};
+    router.push(`/booking?tourId=${tour.id}&tourName=${encodeURIComponent(tour.name)}&price=${encodeURIComponent(tour.price)}`);
+  };
   
- 
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
@@ -356,7 +348,6 @@ export default function TourDetailPage() {
         url: window.location.href,
       });
     } else {
-      // Fallback for browsers that don't support Web Share API
       navigator.clipboard.writeText(window.location.href);
       alert('Link copied to clipboard!');
     }
@@ -364,46 +355,100 @@ export default function TourDetailPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
-      {/* Navigation Bar */}
-      <nav className="bg-white shadow-md sticky top-0 z-40">
+      {/* Responsive Navigation Bar */}
+      <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <Button 
-              variant="ghost" 
-              onClick={() => router.back()}
-              className="flex items-center gap-2 hover:bg-green-50"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Tours
-            </Button>
+          <div className="flex justify-between items-center py-3 sm:py-4">
+            {/* Back Button - Hidden on small mobile, icon only on mobile */}
+            <div className="flex items-center">
+              <Button 
+                variant="ghost" 
+                onClick={() => router.back()}
+                className="flex items-center gap-1 sm:gap-2 hover:bg-green-50 px-2 sm:px-4"
+                size="sm"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span className="hidden sm:inline">Back</span>
+              </Button>
+            </div>
             
+            {/* Logo - Responsive sizing */}
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
                 <img 
                   src="/tourslk-logo.png" 
                   alt="ToursLk Logo" 
-                  className="w-6 h-6 object-contain"
+                  className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
                 />
               </div>
-              <span className="text-xl font-bold text-gray-800">lankaumeshtours</span>
+              <span className="text-lg sm:text-xl font-bold text-gray-800 truncate max-w-[120px] sm:max-w-none">
+                lankaumeshtours
+              </span>
             </div>
 
-            <div className="flex gap-2">
-              <Button variant="outline" size="sm" onClick={handleShare}>
-                <Share2 className="w-4 h-4 mr-2" />
-                Share
+            {/* Action Buttons - Responsive layout */}
+            <div className="flex gap-1 sm:gap-2">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={handleShare}
+                className="hidden sm:flex"
+              >
+                <Share2 className="w-4 h-4 mr-1 sm:mr-2" />
+                <span className="hidden md:inline">Share</span>
               </Button>
-              <Button size="sm" className={`bg-gradient-to-r ${tour.color} text-white`}>
-                <Heart className="w-4 h-4 mr-2" />
-                Save
+              
+              {/* Mobile menu button */}
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="sm:hidden"
+              >
+                {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              </Button>
+              
+              <Button 
+                size="sm" 
+                className={`bg-gradient-to-r ${tour.color} text-white hidden sm:flex`}
+              >
+                <Heart className="w-4 h-4 mr-1 sm:mr-2" />
+                <span className="hidden md:inline">Save</span>
               </Button>
             </div>
           </div>
+
+          {/* Mobile Menu Dropdown */}
+          {isMenuOpen && (
+            <div className="sm:hidden border-t border-gray-200 py-4 space-y-2">
+              <Button 
+                variant="ghost" 
+                onClick={handleShare}
+                className="w-full justify-start"
+              >
+                <Share2 className="w-4 h-4 mr-2" />
+                Share Tour
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start"
+              >
+                <Heart className="w-4 h-4 mr-2" />
+                Save Tour
+              </Button>
+              <Button 
+                onClick={handleBookNow}
+                className={`w-full bg-gradient-to-r ${tour.color} text-white`}
+              >
+                Book This Tour
+              </Button>
+            </div>
+          )}
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative h-[60vh] overflow-hidden">
+      {/* Responsive Hero Section */}
+      <section className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden">
         <img 
           src={tour.image} 
           alt={tour.name}
@@ -411,11 +456,57 @@ export default function TourDetailPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         
-        {/* Floating Info Card */}
-        <div className="absolute bottom-8 left-8 right-8">
+        {/* Responsive Floating Info Card */}
+        <div className="absolute bottom-4 sm:bottom-8 left-4 right-4 sm:left-8 sm:right-8">
           <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-2xl animate-slide-in-up">
-            <CardContent className="p-6">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+            <CardContent className="p-4 sm:p-6">
+              {/* Mobile Layout - Stacked */}
+              <div className="block lg:hidden space-y-4">
+                <div>
+                  <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 leading-tight">{tour.name}</h1>
+                  <p className="text-sm sm:text-base text-gray-600 mb-3 line-clamp-2">{tour.description}</p>
+                  
+                  {/* Mobile Stats Row */}
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm">
+                    <div className="flex items-center gap-1">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <span className="font-semibold">{tour.rating}</span>
+                      <span className="text-gray-500 hidden sm:inline">(245 reviews)</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4 text-gray-500" />
+                      <span>{tour.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Users className="w-4 h-4 text-gray-500" />
+                      <span className="truncate max-w-[100px] sm:max-w-none">{tour.groupSize}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Price and Book Button Row */}
+                <div className="flex items-center justify-between">
+                  <div>
+                    {tour.originalPrice && (
+                      <span className="text-sm sm:text-base text-gray-500 line-through mr-2">
+                        {tour.originalPrice}
+                      </span>
+                    )}
+                    <span className="text-2xl sm:text-3xl font-bold text-green-600">{tour.price}</span>
+                    <span className="text-gray-500 ml-1 text-sm">/person</span>
+                  </div>
+                  <Button 
+                    size="sm" 
+                    className={`bg-gradient-to-r ${tour.color} hover:shadow-lg hover:scale-105 transition-all duration-300 whitespace-nowrap`}
+                    onClick={handleBookNow}
+                  >
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+
+              {/* Desktop Layout - Grid */}
+              <div className="hidden lg:grid grid-cols-3 gap-6 items-center">
                 <div>
                   <h1 className="text-3xl font-bold text-gray-900 mb-2">{tour.name}</h1>
                   <p className="text-gray-600 mb-4">{tour.description}</p>
@@ -432,20 +523,20 @@ export default function TourDetailPage() {
                   </div>
                 </div>
                 
-                <div className="lg:text-center">
+                <div className="text-center">
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 lg:justify-center">
+                    <div className="flex items-center gap-2 justify-center">
                       <Users className="w-4 h-4 text-gray-500" />
                       <span className="text-sm">{tour.groupSize}</span>
                     </div>
-                    <div className="flex items-center gap-2 lg:justify-center">
+                    <div className="flex items-center gap-2 justify-center">
                       <MapPin className="w-4 h-4 text-gray-500" />
                       <span className="text-sm">{tour.startLocation}</span>
                     </div>
                   </div>
                 </div>
                 
-                <div className="lg:text-right">
+                <div className="text-right">
                   <div className="mb-4">
                     {tour.originalPrice && (
                       <span className="text-lg text-gray-500 line-through mr-2">
@@ -469,36 +560,76 @@ export default function TourDetailPage() {
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-12">
+      {/* Responsive Main Content */}
+      <section className="py-6 sm:py-8 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Tabs defaultValue="overview" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-8 bg-white border border-green-200">
-              <TabsTrigger value="overview" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700">Overview</TabsTrigger>
-              <TabsTrigger value="itinerary" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700">Itinerary</TabsTrigger>
-              <TabsTrigger value="inclusions" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700">What's Included</TabsTrigger>
-              <TabsTrigger value="gallery" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700">Gallery</TabsTrigger>
-              <TabsTrigger value="booking" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700">Book Now</TabsTrigger>
-            </TabsList>
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            {/* Responsive Tab Navigation */}
+            <div className="mb-6 sm:mb-8">
+              {/* Mobile: Horizontal scrollable tabs */}
+              <div className="sm:hidden">
+                <div className="flex space-x-1 overflow-x-auto pb-2 scrollbar-hide">
+                  {[
+                    { value: 'overview', label: 'Overview' },
+                    { value: 'itinerary', label: 'Itinerary' },
+                    { value: 'inclusions', label: 'Included' },
+                    { value: 'gallery', label: 'Gallery' },
+                    { value: 'booking', label: 'Book' }
+                  ].map((tab) => (
+                    <button
+                      key={tab.value}
+                      onClick={() => setActiveTab(tab.value)}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
+                        activeTab === tab.value
+                          ? 'bg-green-100 text-green-700 border border-green-200'
+                          : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-            <TabsContent value="overview" className="space-y-8">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Desktop: Full width grid */}
+              <TabsList className="hidden sm:grid w-full grid-cols-5 bg-white border border-green-200 h-auto p-1">
+                <TabsTrigger value="overview" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700 py-3">
+                  Overview
+                </TabsTrigger>
+                <TabsTrigger value="itinerary" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700 py-3">
+                  Itinerary
+                </TabsTrigger>
+                <TabsTrigger value="inclusions" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700 py-3">
+                  What's Included
+                </TabsTrigger>
+                <TabsTrigger value="gallery" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700 py-3">
+                  Gallery
+                </TabsTrigger>
+                <TabsTrigger value="booking" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700 py-3">
+                  Book Now
+                </TabsTrigger>
+              </TabsList>
+            </div>
+
+            <TabsContent value="overview" className="space-y-6 sm:space-y-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                {/* Main Content - Mobile first approach */}
                 <div className="lg:col-span-2">
                   <Card className="animate-fade-in-left">
                     <CardHeader>
-                      <CardTitle className="text-2xl">About This Tour</CardTitle>
+                      <CardTitle className="text-xl sm:text-2xl">About This Tour</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                      <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
                         {tour.longDescription}
                       </p>
                       
-                      <h3 className="text-xl font-semibold mb-4">Tour Highlights</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-4">Tour Highlights</h3>
+                      <div className="grid grid-cols-1 gap-3">
                         {tour.highlights.map((highlight, index) => (
-                          <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-green-50 border border-green-200">
-                            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                            <span className="text-gray-700">{highlight}</span>
+                          <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-green-50 border border-green-200">
+                            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                            <span className="text-gray-700 text-sm sm:text-base">{highlight}</span>
                           </div>
                         ))}
                       </div>
@@ -506,39 +637,42 @@ export default function TourDetailPage() {
                   </Card>
                 </div>
                 
+                {/* Sidebar - Responsive stacking */}
                 <div className="space-y-6">
-                  {/* Quick Info */}
+                  {/* Quick Info Card */}
                   <Card className="animate-fade-in-right">
                     <CardHeader>
-                      <CardTitle>Quick Info</CardTitle>
+                      <CardTitle className="text-lg sm:text-xl">Quick Info</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Duration</span>
-                        <span className="font-semibold">{tour.duration}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Group Size</span>
-                        <span className="font-semibold">{tour.groupSize}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Difficulty</span>
-                        <Badge variant="outline" className="border-green-200 text-green-700">
-                          {tour.difficulty}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Best Time</span>
-                        <span className="font-semibold">{tour.bestTime}</span>
-                      </div>
-                      <Separator />
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Start Location</span>
-                        <span className="font-semibold text-right">{tour.startLocation}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">End Location</span>
-                        <span className="font-semibold text-right">{tour.endLocation}</span>
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center">
+                          <span className="text-gray-600 text-sm sm:text-base">Duration</span>
+                          <span className="font-semibold text-sm sm:text-base">{tour.duration}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-gray-600 text-sm sm:text-base">Group Size</span>
+                          <span className="font-semibold text-sm sm:text-base text-right">{tour.groupSize}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-gray-600 text-sm sm:text-base">Difficulty</span>
+                          <Badge variant="outline" className="border-green-200 text-green-700 text-xs sm:text-sm">
+                            {tour.difficulty}
+                          </Badge>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-gray-600 text-sm sm:text-base">Best Time</span>
+                          <span className="font-semibold text-sm sm:text-base">{tour.bestTime}</span>
+                        </div>
+                        <Separator />
+                        <div className="flex justify-between items-start">
+                          <span className="text-gray-600 text-sm sm:text-base">Start Location</span>
+                          <span className="font-semibold text-sm sm:text-base text-right max-w-[60%]">{tour.startLocation}</span>
+                        </div>
+                        <div className="flex justify-between items-start">
+                          <span className="text-gray-600 text-sm sm:text-base">End Location</span>
+                          <span className="font-semibold text-sm sm:text-base text-right max-w-[60%]">{tour.endLocation}</span>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -546,14 +680,14 @@ export default function TourDetailPage() {
                   {/* Contact Card */}
                   <Card className="animate-fade-in-right" style={{ animationDelay: '0.2s' }}>
                     <CardHeader>
-                      <CardTitle>Need Help?</CardTitle>
+                      <CardTitle className="text-lg sm:text-xl">Need Help?</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3">
-                      <Button variant="outline" className="w-full justify-start">
+                      <Button variant="outline" className="w-full justify-start text-sm sm:text-base">
                         <Phone className="w-4 h-4 mr-2" />
                         Call Us: +94 74 135 9498
                       </Button>
-                      <Button variant="outline" className="w-full justify-start">
+                      <Button variant="outline" className="w-full justify-start text-sm sm:text-base">
                         <Mail className="w-4 h-4 mr-2" />
                         Email: info@lankaumeshtours.com
                       </Button>
@@ -566,24 +700,68 @@ export default function TourDetailPage() {
             <TabsContent value="itinerary" className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Day by Day Itinerary</CardTitle>
-                  <CardDescription>Detailed breakdown of your {tour.duration} adventure</CardDescription>
+                  <CardTitle className="text-xl sm:text-2xl">Day by Day Itinerary</CardTitle>
+                  <CardDescription className="text-sm sm:text-base">
+                    Detailed breakdown of your {tour.duration} adventure
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-6">
+                  <div className="space-y-4 sm:space-y-6">
                     {tour.itinerary.map((day, index) => (
-                      <div key={day.day} className={`relative p-6 rounded-lg border-2 border-green-100 bg-gradient-to-r from-green-50 to-blue-50 animate-stagger-${index + 1}`}>
-                        <div className="flex items-center gap-4 mb-4">
-                          <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${tour.color} flex items-center justify-center text-white font-bold text-lg`}>
+                      <div key={day.day} className={`relative p-4 sm:p-6 rounded-lg border-2 border-green-100 bg-gradient-to-r from-green-50 to-blue-50 animate-stagger-${index + 1}`}>
+                        <div className="flex items-start gap-3 sm:gap-4 mb-4">
+                          <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r ${tour.color} flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0`}>
                             {day.day}
                           </div>
-                          <div>
-                            <h3 className="text-xl font-semibold text-gray-900">{day.title}</h3>
-                            <p className="text-gray-600">{day.description}</p>
+                          <div className="min-w-0 flex-1">
+                            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">{day.title}</h3>
+                            <p className="text-gray-600 text-sm sm:text-base">{day.description}</p>
                           </div>
                         </div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        {/* Mobile: Stacked layout */}
+                        <div className="space-y-4 sm:hidden">
+                          <div>
+                            <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2 text-sm">
+                              <Camera className="w-4 h-4" />
+                              Activities
+                            </h4>
+                            <ul className="space-y-1">
+                              {day.activities.map((activity, idx) => (
+                                <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                                  <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0 mt-0.5" />
+                                  <span>{activity}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          <div>
+                            <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2 text-sm">
+                              <Utensils className="w-4 h-4" />
+                              Meals
+                            </h4>
+                            <ul className="space-y-1">
+                              {day.meals.map((meal, idx) => (
+                                <li key={idx} className="text-sm text-gray-600 flex items-center gap-2">
+                                  <CheckCircle className="w-3 h-3 text-green-500" />
+                                  {meal}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          <div>
+                            <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2 text-sm">
+                              <Bed className="w-4 h-4" />
+                              Accommodation
+                            </h4>
+                            <p className="text-sm text-gray-600">{day.accommodation}</p>
+                          </div>
+                        </div>
+
+                        {/* Desktop: Grid layout */}
+                        <div className="hidden sm:grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                           <div>
                             <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
                               <Camera className="w-4 h-4" />
@@ -591,9 +769,9 @@ export default function TourDetailPage() {
                             </h4>
                             <ul className="space-y-1">
                               {day.activities.map((activity, idx) => (
-                                <li key={idx} className="text-sm text-gray-600 flex items-center gap-2">
-                                  <CheckCircle className="w-3 h-3 text-green-500" />
-                                  {activity}
+                                <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                                  <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0 mt-0.5" />
+                                  <span>{activity}</span>
                                 </li>
                               ))}
                             </ul>
@@ -630,11 +808,11 @@ export default function TourDetailPage() {
             </TabsContent>
 
             <TabsContent value="inclusions">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                 <Card className="animate-fade-in-left">
                   <CardHeader>
-                    <CardTitle className="text-xl text-green-700 flex items-center gap-2">
-                      <CheckCircle className="w-6 h-6" />
+                    <CardTitle className="text-lg sm:text-xl text-green-700 flex items-center gap-2">
+                      <CheckCircle className="w-5 sm:w-6 h-5 sm:h-6" />
                       What's Included
                     </CardTitle>
                   </CardHeader>
@@ -642,8 +820,8 @@ export default function TourDetailPage() {
                     <ul className="space-y-3">
                       {tour.inclusions.map((item, index) => (
                         <li key={index} className="flex items-start gap-3 p-3 rounded-lg bg-green-50 border border-green-200">
-                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{item}</span>
+                          <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-700 text-sm sm:text-base">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -652,8 +830,8 @@ export default function TourDetailPage() {
 
                 <Card className="animate-fade-in-right">
                   <CardHeader>
-                    <CardTitle className="text-xl text-red-700 flex items-center gap-2">
-                      <XCircle className="w-6 h-6" />
+                    <CardTitle className="text-lg sm:text-xl text-red-700 flex items-center gap-2">
+                      <XCircle className="w-5 sm:w-6 h-5 sm:h-6" />
                       What's Not Included
                     </CardTitle>
                   </CardHeader>
@@ -661,8 +839,8 @@ export default function TourDetailPage() {
                     <ul className="space-y-3">
                       {tour.exclusions.map((item, index) => (
                         <li key={index} className="flex items-start gap-3 p-3 rounded-lg bg-red-50 border border-red-200">
-                          <XCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{item}</span>
+                          <XCircle className="w-4 sm:w-5 h-4 sm:h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-700 text-sm sm:text-base">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -674,15 +852,18 @@ export default function TourDetailPage() {
             <TabsContent value="gallery">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Photo Gallery</CardTitle>
-                  <CardDescription>Get a glimpse of what awaits you on this amazing journey</CardDescription>
+                  <CardTitle className="text-xl sm:text-2xl">Photo Gallery</CardTitle>
+                  <CardDescription className="text-sm sm:text-base">
+                    Get a glimpse of what awaits you on this amazing journey
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {/* Responsive Gallery Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                     {tour.gallery.map((image, index) => (
                       <div 
                         key={index} 
-                        className={`relative h-64 rounded-lg overflow-hidden cursor-pointer group hover-lift animate-stagger-${index + 1}`}
+                        className={`relative h-48 sm:h-56 lg:h-64 rounded-lg overflow-hidden cursor-pointer group hover-lift animate-stagger-${index + 1}`}
                         onClick={() => setActiveImageIndex(index)}
                       >
                         <img 
@@ -691,7 +872,7 @@ export default function TourDetailPage() {
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                          <Camera className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          <Camera className="w-6 sm:w-8 h-6 sm:h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
                       </div>
                     ))}
@@ -700,49 +881,63 @@ export default function TourDetailPage() {
               </Card>
             </TabsContent>
 
-            <TabsContent value="booking" id="booking-section">
+            <TabsContent value="booking">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Book Your Adventure</CardTitle>
-                  <CardDescription>Ready to experience {tour.name}? Let's plan your perfect trip!</CardDescription>
+                  <CardTitle className="text-xl sm:text-2xl">Book Your Adventure</CardTitle>
+                  <CardDescription className="text-sm sm:text-base">
+                    Ready to experience {tour.name}? Let's plan your perfect trip!
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                    {/* Left Column */}
                     <div className="space-y-6">
-                      <div className="p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-green-200">
-                        <h3 className="text-xl font-semibold mb-4">Tour Summary</h3>
+                      {/* Tour Summary */}
+                      <div className="p-4 sm:p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-green-200">
+                        <h3 className="text-lg sm:text-xl font-semibold mb-4">Tour Summary</h3>
                         <div className="space-y-3">
-                          <div className="flex justify-between">
-                            <span>Tour Name:</span>
-                            <span className="font-semibold">{tour.name}</span>
+                          <div className="flex justify-between items-start">
+                            <span className="text-gray-600 text-sm sm:text-base">Tour Name:</span>
+                            <span className="font-semibold text-sm sm:text-base text-right max-w-[60%]">{tour.name}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span>Duration:</span>
-                            <span className="font-semibold">{tour.duration}</span>
+                            <span className="text-gray-600 text-sm sm:text-base">Duration:</span>
+                            <span className="font-semibold text-sm sm:text-base">{tour.duration}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span>Price per person:</span>
-                            <span className="font-semibold text-green-600">{tour.price}</span>
+                            <span className="text-gray-600 text-sm sm:text-base">Price per person:</span>
+                            <span className="font-semibold text-green-600 text-sm sm:text-base">{tour.price}</span>
                           </div>
                         </div>
                       </div>
 
+                      {/* Contact Buttons */}
                       <div className="space-y-4">
-                        <h3 className="text-xl font-semibold">Contact Information</h3>
-                        <Button className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-lg py-6">
-                          <Phone className="w-5 h-5 mr-2" />
-                          Call Now: +94 74 135 9498
+                        <h3 className="text-lg sm:text-xl font-semibold">Contact Information</h3>
+                        <Button 
+                          className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-base sm:text-lg py-4 sm:py-6"
+                          onClick={handleBookNow}
+                        >
+                          <Phone className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
+                          Book Now via WhatsApp
                         </Button>
-                        <Button variant="outline" className="w-full border-green-300 hover:bg-green-50 text-lg py-6">
-                          <Mail className="w-5 h-5 mr-2" />
+                        <Button variant="outline" className="w-full border-green-300 hover:bg-green-50 text-base sm:text-lg py-4 sm:py-6">
+                          <Mail className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
                           Email: info@lankaumeshtours.com
+                        </Button>
+                        <Button variant="outline" className="w-full border-green-300 hover:bg-green-50 text-base sm:text-lg py-4 sm:py-6">
+                          <Phone className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
+                          Call: +94 74 135 9498
                         </Button>
                       </div>
                     </div>
 
+                    {/* Right Column */}
                     <div className="space-y-6">
+                      {/* Why Choose Us */}
                       <div>
-                        <h3 className="text-xl font-semibold mb-4">Why Choose Us?</h3>
+                        <h3 className="text-lg sm:text-xl font-semibold mb-4">Why Choose Us?</h3>
                         <div className="space-y-3">
                           {[
                             "15+ years of experience",
@@ -752,17 +947,28 @@ export default function TourDetailPage() {
                             "Customizable itineraries",
                             "Safety certified"
                           ].map((benefit, index) => (
-                            <div key={index} className="flex items-center gap-3">
-                              <CheckCircle className="w-5 h-5 text-green-600" />
-                              <span>{benefit}</span>
+                            <div key={index} className="flex items-start gap-3">
+                              <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                              <span className="text-sm sm:text-base">{benefit}</span>
                             </div>
                           ))}
                         </div>
                       </div>
 
+                      {/* Special Offer */}
                       <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                        <h4 className="font-semibold text-yellow-800 mb-2">Special Offer!</h4>
-                        <p className="text-yellow-700">Book now and save {tour.originalPrice ? `${parseInt(tour.originalPrice.slice(1)) - parseInt(tour.price.slice(1))}` : '15%'} on your total booking!</p>
+                        <h4 className="font-semibold text-yellow-800 mb-2 text-sm sm:text-base">Special Offer!</h4>
+                        <p className="text-yellow-700 text-sm sm:text-base">
+                          Book now and save {tour.originalPrice ? `${parseInt(tour.originalPrice.slice(1)) - parseInt(tour.price.slice(1))}` : '15%'} on your total booking!
+                        </p>
+                      </div>
+
+                      {/* Emergency Contact Info */}
+                      <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                        <h4 className="font-semibold text-blue-800 mb-2 text-sm sm:text-base">24/7 Support</h4>
+                        <p className="text-blue-700 text-sm">
+                          Need immediate assistance? Our team is available around the clock to help with your booking and travel needs.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -772,6 +978,30 @@ export default function TourDetailPage() {
           </Tabs>
         </div>
       </section>
+
+      {/* Responsive Sticky Bottom Bar for Mobile */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-40">
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              {tour.originalPrice && (
+                <span className="text-sm text-gray-500 line-through">{tour.originalPrice}</span>
+              )}
+              <span className="text-xl font-bold text-green-600">{tour.price}</span>
+            </div>
+            <span className="text-xs text-gray-500">per person</span>
+          </div>
+          <Button 
+            className={`bg-gradient-to-r ${tour.color} hover:shadow-lg flex-1 max-w-[200px]`}
+            onClick={handleBookNow}
+          >
+            Book This Tour
+          </Button>
+        </div>
+      </div>
+
+      {/* Add bottom padding for mobile sticky bar */}
+      <div className="sm:hidden h-20"></div>
     </div>
   );
 }
