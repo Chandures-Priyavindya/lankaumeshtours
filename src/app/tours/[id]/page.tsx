@@ -376,8 +376,8 @@ export default function TourDetailPage() {
             <div className="flex items-center space-x-2">
               <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
                 <img 
-                  src="/tourslk-logo.png" 
-                  alt="ToursLk Logo" 
+                  src="/Lankaumeshtours.png" 
+                  alt="Lankaumeshtours Logo" 
                   className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
                 />
               </div>

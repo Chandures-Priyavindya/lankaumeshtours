@@ -171,8 +171,8 @@ Message: ${formData.message}
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
                 <img
-                  src="/tourslk-logo.png"
-                  alt="ToursLk Logo"
+                  src="/Lankaumeshtours.png"
+                  alt="Lankaumeshtours Logo"
                   className="w-6 h-6 object-contain"
                 />
               </div>

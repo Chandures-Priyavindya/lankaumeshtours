@@ -322,8 +322,8 @@ export default function Home() {
             <div className="flex items-center space-x-2 animate-fade-in-left">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center animate-pulse-glow">
                 <img 
-                  src="/tourslk-logo.png" 
-                  alt="ToursLk Logo" 
+                  src="/Lankaumeshtours.png" 
+                  alt="Lankaumeshtours Logo" 
                   className="w-8 h-8 object-contain"
                 />
               </div>
@@ -793,8 +793,8 @@ export default function Home() {
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center animate-pulse-glow">
                   <img
-                    src="/tourslk-logo.png"
-                    alt="ToursLk Logo"
+                    src="/Lankaumeshtours.png"
+                    alt="Lankaumeshtours Logo"
                     className="w-6 h-6 object-contain"
                   />
                 </div>
