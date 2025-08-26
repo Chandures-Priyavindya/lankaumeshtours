@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Label } from '@/components/ui/label';
 import {
   Card,
   CardContent,
@@ -32,6 +33,11 @@ import {
   DollarSign,
 } from "lucide-react";
 import router from "next/router";
+
+
+
+
+
 
 // TourCard component definition
 type TourCardProps = {
@@ -116,6 +122,56 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [currentTourIndex, setCurrentTourIndex] = useState(0);
+  // Add this near the top of your component with other state variables
+const [formData, setFormData] = useState({
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  message: ''
+});
+// Add this function to handle WhatsApp submission
+const handleSubmitToWhatsApp = () => {
+  // Validate form data
+  if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+    alert('Please fill in all required fields');
+    return;
+  }
+
+  // Your WhatsApp number (from your contact section)
+  const whatsappNumber = '94715235984';
+  
+  // Create formatted message
+  const messageText = `
+*New Contact Form Submission from lankaumeshtours.com*
+
+*Name:* ${formData.firstName} ${formData.lastName}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone || 'Not provided'}
+*Travel Plans:* ${formData.message}
+
+*Website:* lankaumeshtours.com
+*Date:* ${new Date().toLocaleDateString()}
+  `.trim();
+
+  // Create WhatsApp URL
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(messageText)}`;
+  
+  // Open WhatsApp
+  window.open(whatsappURL, '_blank');
+  
+  // Clear form after submission
+  setFormData({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  
+  // Show success message
+  alert('Form submitted! WhatsApp will open with your message.');
+};
 
   useEffect(() => {
     const handleScroll = () => {
@@ -366,25 +422,28 @@ export default function Home() {
   ];
 
   const testimonials = [
-    {
-      name: "Chandures Priyavindya",
-      location: "United Kingdom",
-      text: "We spent 10 days exploring Sri Lanka with Umesh as our driver and guide, and it was hands down the best decision we made for our trip. From the moment he picked us up at the airport, Umesh went above and beyond to ensure we had an authentic and memorable experience. More...",
-      rating: 5,
-    },
-    {
-      name: "Ruhi balha",
-      location: "Singapore",
-      text: "Umesh was fantastic throughout our Sri Lanka journey! Professional, reliable, and incredibly knowledgeable about the best places to visit. His comfortable vehicle and safe driving made long distances enjoyable, while his warm hospitality … More...",
-      rating: 5,
-    },
-    {
-      name: "Jxxl Lxxl",
-      location: "Australia",
-      text: "Very nice driver. He drives very safely and obeys traffic rules.He is very punctual, professional, and responsible!.Highly recommended.He speaks good English and shares interesting facts about the area and Sri Lanka.",
-      rating: 5,
-    },
-  ];
+  {
+    name: "Chandures Priyavindya",
+    location: "United Kingdom",
+    text: "We spent 10 days exploring Sri Lanka with Umesh as our driver and guide, and it was hands down the best decision we made for our trip. From the moment he picked us up at the airport, Umesh went above and beyond to ensure we had an authentic and memorable experience. More...",
+    rating: 5,
+    image: "https://thafd.bing.com/th/id/OIP.mTH8GtRVqcf1Lv1ir8lbcgHaJ4?w=128&h=180&c=7&r=0&o=7&cb=thfc1&pid=1.7&rm=3"
+  },
+  {
+    name: "Ruhi balha",
+    location: "Singapore",
+    text: "Umesh was fantastic throughout our Sri Lanka journey! Professional, reliable, and incredibly knowledgeable about the best places to visit. His comfortable vehicle and safe driving made long distances enjoyable, while his warm hospitality … More...",
+    rating: 5,
+    image: "https://thafd.bing.com/th/id/OIF.9uPkn4pzk0XkDXpfrfRJ0A?w=199&h=306&c=7&r=0&o=5&cb=thfc1&pid=1.7"
+  },
+  {
+    name: "Jxxl Lxxl",
+    location: "Australia",
+    text: "Very nice driver. He drives very safely and obeys traffic rules.He is very punctual, professional, and responsible!.Highly recommended.He speaks good English and shares interesting facts about the area and Sri Lanka.",
+    rating: 5,
+    image: "https://thafd.bing.com/th/id/OIP.lKJ3LJRkKO_KCixe8kL4zwHaHa?w=170&h=180&c=7&r=0&o=5&cb=thfc1&pid=1.7"
+  },
+];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 animate-gradient">
@@ -777,167 +836,212 @@ export default function Home() {
 
       {/* Testimonials */}
       <section
-        id="testimonials"
-        className="py-20 bg-gradient-to-br from-blue-50 to-green-50 animate-gradient"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What Our Customers Say
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real experiences from travelers who chose lankaumeshtours
-            </p>
-          </div>
+  id="testimonials"
+  className="py-20 bg-gradient-to-br from-blue-50 to-green-50 animate-gradient"
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16 animate-fade-in-up">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        What Our Customers Say
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Real experiences from travelers who chose lankaumeshtours
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className={`p-6 hover:shadow-xl hover:shadow-green-100 transition-all duration-300 hover-lift animate-stagger-${
-                  index + 1
-                } cursor-pointer group hover:scale-105 hover:border-green-200 border border-transparent`}
-                onClick={() =>
-                  window.open(
-                    "https://share.google/Up1MeBcN8g8y0oHpT",
-                    "_blank"
-                  )
-                }
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 fill-yellow-400 text-yellow-400 animate-pulse group-hover:scale-110 transition-transform duration-300"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4 italic group-hover:text-gray-800 transition-colors duration-300">
-                  "{testimonial.text}"
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-green-600 rounded-full flex items-center justify-center text-white font-semibold mr-4 animate-pulse-glow group-hover:scale-110 transition-transform duration-300">
-                      {testimonial.name.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm text-gray-500">
-                        {testimonial.location}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-sm text-green-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    View Reviews →
-                  </div>
-                </div>
-              </Card>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map((testimonial, index) => (
+        <Card
+          key={index}
+          className={`p-6 hover:shadow-xl hover:shadow-green-100 transition-all duration-300 hover-lift animate-stagger-${
+            index + 1
+          } cursor-pointer group hover:scale-105 hover:border-green-200 border border-transparent`}
+          onClick={() =>
+            window.open(
+              "https://share.google/Up1MeBcN8g8y0oHpT",
+              "_blank"
+            )
+          }
+        >
+          <div className="flex mb-4">
+            {[...Array(testimonial.rating)].map((_, i) => (
+              <Star
+                key={i}
+                className="w-5 h-5 fill-yellow-400 text-yellow-400 animate-pulse group-hover:scale-110 transition-transform duration-300"
+              />
             ))}
           </div>
-
-          {/* View All Reviews Button */}
-          <div className="text-center mt-12">
-            <Button
-              onClick={() =>
-                window.open("https://share.google/Up1MeBcN8g8y0oHpT", "_blank")
-              }
-              className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-lg px-8 py-4 hover-lift animate-pulse-glow"
-            >
-              View All Google Reviews
-            </Button>
+          <p className="text-gray-600 mb-4 italic group-hover:text-gray-800 transition-colors duration-300">
+            "{testimonial.text}"
+          </p>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              {/* Updated circular image container */}
+              <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-gradient-to-r from-blue-600 to-green-600 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback if image fails to load
+                    e.currentTarget.style.display = 'none';
+                    (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                  }}
+                />
+                {/* Fallback div with initials (hidden by default) */}
+                <div 
+                  className="w-full h-full bg-gradient-to-r from-blue-600 to-green-600 flex items-center justify-center text-white font-semibold animate-pulse-glow"
+                  style={{ display: 'none' }}
+                >
+                  {testimonial.name.charAt(0)}
+                </div>
+              </div>
+              <div>
+                <div className="font-semibold">{testimonial.name}</div>
+                <div className="text-sm text-gray-500">
+                  {testimonial.location}
+                </div>
+              </div>
+            </div>
+            <div className="text-sm text-green-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              View Reviews →
+            </div>
           </div>
-        </div>
-      </section>
+        </Card>
+      ))}
+    </div>
+
+    {/* View All Reviews Button */}
+    <div className="text-center mt-12">
+      <Button
+        onClick={() =>
+          window.open("https://share.google/Up1MeBcN8g8y0oHpT", "_blank")
+        }
+        className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-lg px-8 py-4 hover-lift animate-pulse-glow"
+      >
+        View All Google Reviews
+      </Button>
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Get In Touch
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to start your Sri Lankan adventure? Contact us today!
-            </p>
-          </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16 animate-fade-in-up">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        Get In Touch
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Ready to start your Sri Lankan adventure? Contact us today!
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="animate-fade-in-left">
-              <Card className="hover-lift">
-                <CardHeader>
-                  <CardTitle>Send us a Message</CardTitle>
-                  <CardDescription>
-                    Fill out the form below and we'll get back to you as soon as
-                    possible
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <Input placeholder="First Name" className="hover-lift" />
-                    <Input placeholder="Last Name" className="hover-lift" />
-                  </div>
-                  <Input
-                    placeholder="Email Address"
-                    type="email"
-                    className="hover-lift"
-                  />
-                  <Input placeholder="Phone Number" className="hover-lift" />
-                  <Textarea
-                    placeholder="Tell us about your travel plans..."
-                    rows={4}
-                    className="hover-lift"
-                  />
-                  <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 animate-pulse-glow">
-                    Send Message
-                  </Button>
-                </CardContent>
-              </Card>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="animate-fade-in-left">
+        <Card className="hover-lift">
+          <CardHeader>
+            <CardTitle>Send us a Message</CardTitle>
+            <CardDescription>
+              Fill out the form below and we'll get back to you as soon as
+              possible
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <Input 
+                placeholder="First Name *" 
+                className="hover-lift"
+                value={formData.firstName}
+                onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+                required
+              />
+              <Input 
+                placeholder="Last Name *" 
+                className="hover-lift"
+                value={formData.lastName}
+                onChange={(e) => setFormData({...formData, lastName: e.target.value})}
+                required
+              />
             </div>
+            <Input
+              placeholder="Email Address *"
+              type="email"
+              className="hover-lift"
+              value={formData.email}
+              onChange={(e) => setFormData({...formData, email: e.target.value})}
+              required
+            />
+            <Input 
+              placeholder="Phone Number (Optional)" 
+              className="hover-lift"
+              value={formData.phone}
+              onChange={(e) => setFormData({...formData, phone: e.target.value})}
+            />
+            <Textarea
+              placeholder="Tell us about your travel plans... *"
+              rows={4}
+              className="hover-lift"
+              value={formData.message}
+              onChange={(e) => setFormData({...formData, message: e.target.value})}
+              required
+            />
+            <Button 
+              className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 animate-pulse-glow"
+              onClick={handleSubmitToWhatsApp}
+              type="button"
+            >
+              Send to WhatsApp
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
 
-            <div className="space-y-6 animate-fade-in-right">
-              <Card className="hover-lift">
-                <CardHeader>
-                  <CardTitle>Contact Information</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center space-x-3 hover-lift">
-                    <Phone className="w-5 h-5 text-blue-600 animate-pulse" />
-                    <span>+94 74 135 9498</span>
-                  </div>
-                  <div className="flex items-center space-x-3 hover-lift">
-                    <Mail className="w-5 h-5 text-green-600 animate-pulse" />
-                    <span>info@lankaumeshtours.com</span>
-                  </div>
-                  <div className="flex items-center space-x-3 hover-lift">
-                    <MapPin className="w-5 h-5 text-red-600 animate-pulse" />
-                    <span>Koggala, Sri Lanka</span>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="hover-lift">
-                <CardHeader>
-                  <CardTitle>Business Hours</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="flex justify-between hover-lift">
-                    <span>Monday - Friday</span>
-                    <span>24/7 hours</span>
-                  </div>
-                  <div className="flex justify-between hover-lift">
-                    <span>Saturday</span>
-                    <span>24/7 hours</span>
-                  </div>
-                  <div className="flex justify-between hover-lift">
-                    <span>Sunday</span>
-                    <span>24/7 hours</span>
-                  </div>
-                </CardContent>
-              </Card>
+      {/* Rest of your contact section remains the same */}
+      <div className="space-y-6 animate-fade-in-right">
+        <Card className="hover-lift">
+          <CardHeader>
+            <CardTitle>Contact Information</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center space-x-3 hover-lift">
+              <Phone className="w-5 h-5 text-blue-600 animate-pulse" />
+              <span>+94 74 135 9498</span>
             </div>
-          </div>
-        </div>
-      </section>
+            <div className="flex items-center space-x-3 hover-lift">
+              <Mail className="w-5 h-5 text-green-600 animate-pulse" />
+              <span>info@lankaumeshtours.com</span>
+            </div>
+            <div className="flex items-center space-x-3 hover-lift">
+              <MapPin className="w-5 h-5 text-red-600 animate-pulse" />
+              <span>Koggala, Sri Lanka</span>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="hover-lift">
+          <CardHeader>
+            <CardTitle>Business Hours</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <div className="flex justify-between hover-lift">
+              <span>Monday - Friday</span>
+              <span>24/7 hours</span>
+            </div>
+            <div className="flex justify-between hover-lift">
+              <span>Saturday</span>
+              <span>24/7 hours</span>
+            </div>
+            <div className="flex justify-between hover-lift">
+              <span>Sunday</span>
+              <span>24/7 hours</span>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
