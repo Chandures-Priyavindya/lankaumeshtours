@@ -64,12 +64,12 @@ interface TourPackage {
 const tourPackagesData: TourPackage[] = [
   {
     id: 1,
-    name: "Heritage & Culture Explorer",
+    name: "Heritage, Natural & Wildlife",
     duration: "3 Days | 2 Nights",
     price: "$150",
     originalPrice: "$250",
     rating: 4.9,
-    image: "/heritage-tour.webp",
+    image: "/sigiriyarock.jpg",
     description: "Explore ancient temples, historic sites, and cultural wonders",
     highlights: ["Pickup you Downsouth Hotels","Sigiriya Rock", "Nuwara Eliya","Ella", "Udawalawa","Drop you Downsouth Hotels"],
     color: "from-green-500 to-green-600",
@@ -123,12 +123,12 @@ const tourPackagesData: TourPackage[] = [
   },
   {
     id: 2,
-    name: "Beach Paradise Getaway",
+    name: "Heritage and Hill Country tour",
     duration: "4 Days | 3 Nights",
     price: "$649",
     originalPrice: "$799",
     rating: 4.8,
-    image: "/beach-paradise.webp",
+    image: "/srilankawaterfall.jpg",
     description: "Pristine beaches, crystal waters, and tropical sunsets",
     highlights: ["Mirissa Beach", "Unawatuna Bay", "Whale Watching"],
     color: "from-blue-400 to-blue-500",
@@ -173,7 +173,7 @@ const tourPackagesData: TourPackage[] = [
     price: "$759",
     originalPrice: "$899",
     rating: 4.7,
-    image: "/wildlife-safari.webp",
+    image: "/udawalawa.jpg",
     description: "Encounter elephants, leopards, and exotic wildlife in their natural habitat",
     highlights: [
       "Pickup Colombo Airport(CMB)",
@@ -300,6 +300,244 @@ const tourPackagesData: TourPackage[] = [
       "Travel insurance",
       "Alcoholic beverages",
       "Tips and gratuities",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: [
+      "/wildlife-1.jpg", 
+      "/wildlife-2.jpg", 
+      "/wildlife-3.jpg", 
+      "/wildlife-4.jpg"
+    ]
+  },
+  {
+    id: 4,
+    name: "Galle City Tour",
+    duration: "1 Day", 
+    price: "$759",
+    originalPrice: "$899",
+    rating: 4.7,
+    image: "/gallefort1.jpg",
+    description: "Discover the charm of Galle — where history, culture, and coastal beauty meet.",
+    highlights: [
+      "Pickup your downsouth Hotel",
+      "Galle Fort", 
+      "Koggala Lake Boat Safari",
+      "Sea Turtle Hatchery",
+      "Stick Fisherman",
+      "Drop your Pickup Location"
+    ],
+    color: "from-green-600 to-green-700",
+    iconColor: "text-green-600",
+    longDescription: "Embark on an unforgettable journey through the southern charm of Sri Lanka! Start with a convenient pickup from your down-south hotel and step into the UNESCO World Heritage Galle Fort, where colonial history whispers through every street. Glide across the serene waters of Koggala Lake on a boat safari, spot exotic wildlife, and witness the timeless tradition of Sri Lanka’s famous stick fishermen. Visit a Sea Turtle Hatchery to see conservation in action before ending your day with a safe drop-off at your hotel. A perfect blend of culture, nature, and coastal beauty — all in one tour!",
+    groupSize: "2-8 people (Minimum 2 people)",
+    difficulty: "Very Easy", 
+    bestTime: "12 Months",
+    startLocation: "Pickup your downsouth Hotel",
+    endLocation: "Drop your Pickup Location",
+    itinerary: [
+  {
+    day: 1,
+    title: "Galle City Tour",
+    description: "Explore the charm of Sri Lanka’s southern coast with history, culture, and nature in one unforgettable day.",
+    activities: [
+      "Pickup from your down-south hotel",
+      "Visit the UNESCO World Heritage Galle Fort",
+      "Enjoy a scenic Koggala Lake Boat Safari",
+      "Visit the Sea Turtle Hatchery and learn about conservation",
+      "Experience the traditional Stick Fishermen",
+      "Drop-off at your pickup location"
+    ],
+    meals: ["Not Including"],
+    accommodation: "Not Including"
+  }
+]
+,
+    inclusions: [
+      "Parking Tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
+    ],
+    exclusions: [
+      "Personal expenses",
+      "meals",
+      "Entrance fees to attractions",
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: [
+      "/wildlife-1.jpg", 
+      "/wildlife-2.jpg", 
+      "/wildlife-3.jpg", 
+      "/wildlife-4.jpg"
+    ]
+  },
+  {
+    id: 5,
+    name: "Madu River Boart Safari",
+    duration: "1 Day", 
+    price: "$759",
+    originalPrice: "$899",
+    rating: 4.7,
+    image: "/maduriver.jpg",
+    description: "Madu River Boat Safari: Experience the serene beauty of Madu River",
+    highlights: [
+      "Madu River",
+      "Koggala Lake Boat Safari",
+    ],
+    color: "from-green-600 to-green-700",
+    iconColor: "text-green-600",
+    longDescription: "Escape into the heart of Sri Lanka’s natural beauty with the Madu River Boat Safari. Begin with a convenient pickup from your down-south hotel before drifting through the lush mangrove forests and winding waterways of the Madu River. Discover hidden islands, spot exotic birds and wildlife, and feel the serenity of this tropical paradise. Continue your journey with a scenic Koggala Lake Boat Safari, where culture and nature blend seamlessly. End your adventure with a comfortable drop-off at your hotel — a day filled with relaxation, exploration, and unforgettable memories.",
+    groupSize: "2-8 people (Minimum 2 people)",
+    difficulty: "Very Easy", 
+    bestTime: "12 Months",
+    startLocation: "Pickup your downsouth Hotel",
+    endLocation: "Drop your Pickup Location",
+    itinerary: [
+  {
+    day: 1,
+    title: "Madu River Boat Safari",
+    description: "Discover the beauty of Sri Lanka’s southern waterways with a peaceful river cruise and scenic lake safari.",
+    activities: [
+      "Pickup from your down-south hotel",
+      "Enjoy a boat safari along the Madu River with mangrove forests and small islands",
+      "Experience a scenic Koggala Lake Boat Safari",
+      "Drop-off at your pickup location"
+    ],
+    meals: ["Not Including"],
+    accommodation: "Not Including"
+  }
+]
+
+,
+    inclusions: [
+      "Parking Tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
+    ],
+    exclusions: [
+      "Personal expenses",
+      "meals",
+      "Entrance fees to attractions",
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: [
+      "/wildlife-1.jpg", 
+      "/wildlife-2.jpg", 
+      "/wildlife-3.jpg", 
+      "/wildlife-4.jpg"
+    ]
+  },
+  {
+    id: 6,
+    name: "Mirissa Whale Watching",
+    duration: "1 Day", 
+    price: "$759",
+    originalPrice: "$899",
+    rating: 4.7,
+    image: "/whaleswatching.jpg",
+    description: "Mirissa Whale Watching: Witness the majestic blue whales and dolphins",
+    highlights: [
+      "Pickup from Downsouth hotel",
+      "Mirissa Whale Watching",
+      "Drop your Pickup Location",
+    ],
+    color: "from-green-600 to-green-700",
+    iconColor: "text-green-600",
+    longDescription: "Set sail on an unforgettable adventure in Mirissa, Sri Lanka’s world-famous whale watching paradise! Begin with a convenient pickup from your down-south hotel and cruise into the sparkling Indian Ocean. Keep your eyes open for the majestic blue whales, playful dolphins, and other incredible marine life that call these waters home. After an awe-inspiring morning at sea, return safely and comfortably to your hotel — a once-in-a-lifetime ocean experience you’ll never forget",
+    groupSize: "2-8 people (Minimum 2 people)",
+    difficulty: "Very Easy", 
+    bestTime: "12 Months",
+    startLocation: "Pickup your downsouth Hotel",
+    endLocation: "Drop your Pickup Location",
+    itinerary: [
+  {
+    day: 1,
+    title: "Mirissa Whale Watching",
+    description: "Experience the thrill of Sri Lanka’s southern seas as you set out in search of majestic whales and playful dolphins in their natural habitat.",
+    activities: [
+      "Pickup from your down-south hotel",
+      "Set sail on a Mirissa Whale Watching cruise",
+      "Spot blue whales, sperm whales, dolphins, and other marine life",
+      "Return to Mirissa harbor",
+      "Drop-off at your pickup location"
+    ],
+    meals: ["Not Including"],
+    accommodation: "Not Including"
+  }
+]
+
+
+,
+    inclusions: [
+      "Parking Tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
+    ],
+    exclusions: [
+      "Personal expenses",
+      "meals",
+      "Entrance fees to attractions",
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: [
+      "/wildlife-1.jpg", 
+      "/wildlife-2.jpg", 
+      "/wildlife-3.jpg", 
+      "/wildlife-4.jpg"
+    ]
+  },
+  {
+    id: 7,
+    name: "Airport Drop and Pickup",
+    duration: "1 Day", 
+    price: "$759",
+    originalPrice: "$899",
+    rating: 4.7,
+    image: "/airportdrop.jpg",
+    description: "Airport Drop and Pickup",
+    highlights: ["Pickup Colombo Airport(CMB)","Drop Colombo Airport(CMB)","Airport Drop and Pickup"],
+    color: "from-green-600 to-green-700",
+    iconColor: "text-green-600",
+    longDescription: "Start and end your Sri Lankan journey with comfort and peace of mind. Our reliable airport pickup and drop-off service from Colombo International Airport (CMB) ensures a smooth travel experience. Whether you’re arriving for your dream holiday or heading home after an unforgettable stay, we’ll be there on time with a safe, friendly, and hassle-free ride — because your journey matters from the very first step.",
+    groupSize: "2-8 people (Minimum 2 people)",
+    difficulty: "Very Easy", 
+    bestTime: "12 Months",
+    startLocation: "Pickup Colombo Airport(CMB),Drop Colombo Airport(CMB)",
+    endLocation: "Pickup Colombo Airport(CMB),Drop Colombo Airport(CMB)",
+    itinerary: [
+  {
+    day: 1,
+    title: "Airport Drop & Pickup",
+    description: "Enjoy a smooth and reliable transfer service to and from Colombo International Airport (CMB), ensuring comfort and peace of mind for your journey.",
+    activities: [
+      "Pickup from Colombo Airport (CMB)",
+      "Drop at Colombo Airport (CMB)",
+      "Dedicated Airport Drop and Pickup Service"
+    ],
+    meals: ["Not Including"],
+    accommodation: "Not Including"
+  }
+]
+
+
+
+,
+    inclusions: [
+      "Parking Tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
+    ],
+    exclusions: [
+      "Personal expenses",
+      "meals",
+      "Entrance fees to attractions",
+      "Travel insurance",
+      "Alcoholic beverages",
       "Items not mentioned in inclusions"
     ],
     gallery: [

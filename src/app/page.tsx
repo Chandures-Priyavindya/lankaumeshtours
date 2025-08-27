@@ -222,7 +222,7 @@ const handleSubmitToWhatsApp = () => {
       price: "$150",
       originalPrice: "$1099",
       rating: 4.9,
-      image: "/sigiriya1.jpg",
+      image: "/sigiriyarock.jpg",
       description:
         "Discover Sri Lanka’s timeless treasures, from majestic rock fortresses to misty tea country and wild safaris.",
       highlights: [
@@ -243,7 +243,7 @@ const handleSubmitToWhatsApp = () => {
       price: "$649",
       originalPrice: "$799",
       rating: 4.8,
-      image: "/nuwaraeliya.webp",
+      image: "/srilankawaterfall.jpg",
       description:
         "Explore Sri Lanka’s misty tea hills, scenic Ella, and the wildlife of Udawalawe in a perfect 4-day adventure.",
       highlights: [
@@ -264,7 +264,7 @@ const handleSubmitToWhatsApp = () => {
       price: "$759",
       originalPrice: "$899",
       rating: 4.7,
-      image: "/wildlife-safari.webp",
+      image: "/udawalawa.jpg",
       description: "Encounter elephants, leopards, and exotic wildlife",
       highlights: [
         "Pickup Colombo Airport(CMB)",
@@ -286,14 +286,16 @@ const handleSubmitToWhatsApp = () => {
       price: "$549",
       originalPrice: "$649",
       rating: 4.8,
-      image: "/gallefort.jpg",
+      image: "/gallefort1.jpg",
       description:
         "Galle City Tour: Explore the historic Galle Fort, Koggala Lake, and more",
       highlights: [
+        "Pickup from Downsouth hotel",
         "Galle Fort",
         "Koggala Lake Boat Safari",
         "Sea Turtle Hatchery",
         "Stick Fisherman",
+        "Drop your Pickup Location"
       ],
       color: "from-green-500 to-green-600",
       iconColor: "text-green-600",
@@ -305,10 +307,10 @@ const handleSubmitToWhatsApp = () => {
       price: "$999",
       originalPrice: "$1199",
       rating: 4.9,
-      image: "/madu.jpg",
+      image: "/maduriver.jpg",
       description:
         "Madu River Boat Safari: Experience the serene beauty of Madu River",
-      highlights: ["Madu River", "+", "+"],
+      highlights: ["Pickup from Downsouth hotel","Madu River", "Koggala Lake Boat Safari", "Drop your Pickup Location"],
       color: "from-green-500 to-green-700",
       iconColor: "text-green-600",
     },
@@ -319,10 +321,10 @@ const handleSubmitToWhatsApp = () => {
       price: "$549",
       originalPrice: "$649",
       rating: 4.8,
-      image: "/whale.jpg",
+      image: "/whaleswatching.jpg",
       description:
         "Mirissa Whale Watching: Witness the majestic blue whales and dolphins",
-      highlights: ["Mirissa Whale Watching", "+", "+", "+"],
+      highlights: ["Pickup from Downsouth hotel","Mirissa Whale Watching","Drop your Pickup Location"],
       color: "from-green-500 to-green-600",
       iconColor: "text-green-600",
     },
@@ -333,9 +335,9 @@ const handleSubmitToWhatsApp = () => {
       price: "$549",
       originalPrice: "$649",
       rating: 4.8,
-      image: "/airport.jpg",
+      image: "/airportdrop.jpg",
       description: "Airport Drop and Pickup",
-      highlights: ["Airport Drop and Pickup"],
+      highlights: ["Pickup Colombo Airport(CMB)","Drop Colombo Airport(CMB)","Airport Drop and Pickup"],
       color: "from-green-500 to-green-600",
       iconColor: "text-green-600",
     },
@@ -364,7 +366,7 @@ const handleSubmitToWhatsApp = () => {
       id: 1,
       name: "Sigiriya Rock Fortress",
       location: "Central Sri Lanka",
-      price: "$89",
+      price: "",
       rating: 4.8,
       image: "/sigiriya.jpg",
       description: "Ancient rock fortress and palace ruin with stunning views",
@@ -373,7 +375,7 @@ const handleSubmitToWhatsApp = () => {
       id: 2,
       name: "Mirissa Beach",
       location: "South Coast",
-      price: "$65",
+      price: "",
       rating: 4.9,
       image: "/mirissa-beach.jpg",
       description: "Pristine beach perfect for whale watching and relaxation",
@@ -382,7 +384,7 @@ const handleSubmitToWhatsApp = () => {
       id: 3,
       name: "Ella Highlands",
       location: "Hill Country",
-      price: "$75",
+      price: "",
       rating: 4.7,
       image: "/ella-highlands.jpg",
       description: "Scenic mountain town with tea plantations and hiking",
@@ -391,7 +393,7 @@ const handleSubmitToWhatsApp = () => {
       id: 4,
       name: "Galle Fort",
       location: "Southern Coast",
-      price: "$55",
+      price: "",
       rating: 4.6,
       image: "/galle-fort.jpg",
       description: "Historic Dutch fort with colonial architecture",
@@ -711,9 +713,7 @@ const handleSubmitToWhatsApp = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-white/90 text-gray-900 animate-pulse-glow">
-                      ${destination.price}
-                    </Badge>
+                    
                   </div>
                 </div>
                 <CardHeader>
