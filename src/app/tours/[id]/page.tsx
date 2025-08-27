@@ -129,42 +129,100 @@ const tourPackagesData: TourPackage[] = [
     originalPrice: "$799",
     rating: 4.8,
     image: "/srilankawaterfall.jpg",
-    description: "Pristine beaches, crystal waters, and tropical sunsets",
-    highlights: ["Mirissa Beach", "Unawatuna Bay", "Whale Watching"],
+    description: "Explore Sri Lanka’s misty tea hills, scenic Ella, and the wildlife of Udawalawe in a perfect 4-day adventure.",
+    highlights: [
+      "Pickup Colombo Airport(CMB)",
+      "Sigiriya",
+      "Nuwara Eliya",
+      "Ella",
+      "Udawalawa",
+      "Drop Colombo Airport(CMB)",
+    ],
     color: "from-blue-400 to-blue-500",
     iconColor: "text-blue-600",
-    longDescription: "Escape to paradise with this stunning 5-day beach getaway along Sri Lanka's pristine southern coast. Enjoy crystal-clear waters, golden sandy beaches, and unforgettable whale watching experiences in Mirissa.",
+    longDescription: "Journey through the soul of Sri Lanka with our Heritage & Hill Country Tour. Begin with a warm welcome at Colombo Airport before venturing into the cultural marvel of Sigiriya, where ancient kingdoms come alive. Breathe in the cool mountain air of Nuwara Eliya and soak in the charm of lush tea plantations, before continuing to Ella’s breathtaking landscapes and iconic viewpoints. Encounter incredible wildlife at Udawalawa National Park, where elephants roam free, before concluding your adventure with a smooth drop-off at Colombo Airport. This tour blends culture, nature, and adventure into an unforgettable Sri Lankan escape.",
     groupSize: "2-12 people",
     difficulty: "Easy",
     bestTime: "November - April",
-    startLocation: "Colombo Airport",
-    endLocation: "Colombo Airport",
+    startLocation: "Colombo Airport(CMB)",
+    endLocation: "Colombo Airport(CMB)",
     itinerary: [
       {
         day: 1,
-        title: "Arrival & Transfer to Mirissa",
-        description: "Arrive in paradise and settle into your beachfront accommodation.",
-        activities: ["Airport pickup", "Transfer to Mirissa", "Beach orientation", "Sunset viewing"],
-        meals: ["Lunch", "Dinner"],
-        accommodation: "Beachfront resort in Mirissa"
+        title: "Arrival & Sigiriya",
+        description: "Begin your Sri Lankan adventure with a warm welcome and a visit to the magnificent Sigiriya Rock Fortress.",
+        activities: [
+          "Airport pickup from Colombo (CMB)",
+          "Drive to Sigiriya",
+          "Climb Sigiriya Rock Fortress",
+          "Explore the ancient palace ruins",
+          "Visit Sigiriya Museum",
+          "Overnight in Sigiriya area"
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      },
+      {
+        day: 2,
+        title: "Sigiriya to Nuwara Eliya",
+        description: "Travel from the cultural heartland to the misty highlands of Nuwara Eliya, famous for its tea plantations and colonial charm.",
+        activities: [
+          "Early morning departure from Sigiriya",
+          "Scenic drive through the hill country",
+          "Tea plantation and tea factory visit",
+          "Nuwara Eliya city tour",
+          "Lake Gregory visit",
+          "Overnight in Nuwara Eliya"
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      },
+      {
+        day: 3,
+        title: "Nuwara Eliya to Ella",
+        description: "Take in breathtaking mountain scenery and explore the charming town of Ella.",
+        activities: [
+          "Scenic train ride from Nanu Oya to Ella",
+          "Visit Nine Arches Bridge",
+          "Little Adam’s Peak hike",
+          "Explore Ella town",
+          "Overnight in Ella"
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      },
+      {
+        day: 4,
+        title: "Ella to Udawalawa & Departure",
+        description: "Wrap up your journey with an exciting safari in Udawalawa National Park before returning to Colombo.",
+        activities: [
+          "Early morning departure from Ella",
+          "Drive to Udawalawa",
+          "Morning wildlife safari in Udawalawa National Park",
+          "Spot elephants and other wildlife",
+          "Drive back to Colombo",
+          "Drop-off at Colombo Airport (CMB)",
+          "Departure"
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
       }
     ],
+
+    gallery: ["/beach-1.jpg", "/beach-2.jpg", "/beach-3.jpg", "/beach-4.jpg"],
     inclusions: [
-      "Beachfront accommodation",
-      "Daily breakfast",
-      "Whale watching tour",
-      "Airport transfers",
-      "Beach activities",
-      "Snorkeling equipment"
+      "Parking Tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
     ],
     exclusions: [
-      "International flights",
-      "Lunch and dinner (except mentioned)",
       "Personal expenses",
-      "Water sports activities",
-      "Spa treatments"
+      "meals",
+      "Entrance fees to attractions",
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Items not mentioned in inclusions"
     ],
-    gallery: ["/beach-1.jpg", "/beach-2.jpg", "/beach-3.jpg", "/beach-4.jpg"]
   },
   {
     id: 3,
@@ -286,20 +344,16 @@ const tourPackagesData: TourPackage[] = [
       }
     ],
     inclusions: [
-      "Airport pickup and drop-off",
-      "Air-conditioned vehicle throughout",
-      "English-speaking driver-guide",
-      "Parking tickets and tolls",
-      "Safari jeep for wildlife tours",
-      "Government taxes"
+      "Parking Tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
     ],
     exclusions: [
-      "Entrance fees to attractions",
-      "Meals and accommodation", 
       "Personal expenses",
+      "meals",
+      "Entrance fees to attractions",
       "Travel insurance",
       "Alcoholic beverages",
-      "Tips and gratuities",
       "Items not mentioned in inclusions"
     ],
     gallery: [
