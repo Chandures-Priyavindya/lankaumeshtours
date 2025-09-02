@@ -100,9 +100,10 @@ function BookingFormContent() {
     "Heritage, Natural & Wildlife",
     "Heritage and Hill Country tour",
     "Wildlife Adventure Safari",
-    "Hill Country Tea Trail",
-    "Adventure Sports Combo",
-    "Custom Package",
+    "Galle City Tour",
+    "Madu River Boat Safari",
+    "Mirissa Whale Watching",
+    "Airport Drop and Pickup",
   ];
 
   const handleInputChange = (
@@ -456,7 +457,23 @@ Message: ${formData.message}
                       />
                     </div>
                   </div>
-
+                  {/* Cancellation Policy */}
+          <div className="p-4 bg-amber-50 border border-amber-200 rounded-lg">
+            <div className="flex items-start gap-3">
+              <Clock className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <h4 className="text-sm font-semibold text-amber-900 mb-1">
+                  Cancellation Policy
+                </h4>
+                <p className="text-sm text-amber-800">
+                  Free cancellation is available within{" "}
+                  <span className="font-semibold">24 hours</span> of booking.
+                  After this period, cancellation terms may apply based on your
+                  selected tour package.
+                </p>
+              </div>
+            </div>
+          </div>
                   {/* Submit Button */}
                   <Button
                     type="submit"
