@@ -543,6 +543,7 @@ const handleSubmitToWhatsApp = () => {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-lg px-8 py-4 hover-lift"
+                onClick={() => scrollToSection("destinations")}
               >
                 Explore Destinations
               </Button>
@@ -550,6 +551,7 @@ const handleSubmitToWhatsApp = () => {
                 size="lg"
                 variant="outline"
                 className="text-lg px-8 py-4 border-2 border-white text-black hover:bg-white hover:text-gray-900 hover-lift"
+                onClick={() => scrollToSection("contact")}
               >
                 Contact Us
               </Button>
