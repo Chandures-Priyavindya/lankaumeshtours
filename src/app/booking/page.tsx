@@ -100,6 +100,7 @@ function BookingFormContent() {
     "Heritage, Natural & Wildlife",
     "Heritage and Hill Country tour",
     "Wildlife Adventure Safari",
+    "Wildlife Adventure Safari Udawalawa",
     "Galle City Tour",
     "Madu River Boat Safari",
     "Mirissa Whale Watching",
@@ -137,7 +138,7 @@ Message: ${formData.message}
 `;
 
   // WhatsApp number (without "+" sign)
-  const whatsappNumber = "94715235984";
+  const whatsappNumber = "94741359498";
 
   // Encode the whole message
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -522,7 +523,7 @@ Message: ${formData.message}
                       Email Us
                     </p>
                     <p className="text-sm text-blue-700">
-                      info@lankaumeshtours.com
+                      lankaumeshtours@gmail.com
                     </p>
                   </div>
                 </div>

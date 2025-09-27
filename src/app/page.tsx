@@ -395,7 +395,7 @@ const handleSubmitToWhatsApp = () => {
       location: "Central Sri Lanka",
       price: "",
       rating: 4.8,
-      image: "/sigiriya.jpg",
+      image: "/sigiriya12.jpg",
       description: "Ancient rock fortress and palace ruin with stunning views",
     },
     {
@@ -463,7 +463,7 @@ const handleSubmitToWhatsApp = () => {
     location: "Singapore",
     text: "Umesh was fantastic throughout our Sri Lanka journey! Professional, reliable, and incredibly knowledgeable about the best places to visit. His comfortable vehicle and safe driving made long distances enjoyable, while his warm hospitality … More...",
     rating: 5,
-    image: "https://thafd.bing.com/th/id/OIF.9uPkn4pzk0XkDXpfrfRJ0A?w=199&h=306&c=7&r=0&o=5&cb=thfc1&pid=1.7"
+    image: "/amritha.jpg"
   },
   {
     name: "Jxxl Lxxl",
@@ -1041,7 +1041,7 @@ const handleSubmitToWhatsApp = () => {
             </div>
             <div className="flex items-center space-x-3 hover-lift">
               <Mail className="w-5 h-5 text-green-600 animate-pulse" />
-              <span>info@lankaumeshtours.com</span>
+              <span>lankaumeshtours@gmail.com</span>
             </div>
             <div className="flex items-center space-x-3 hover-lift">
               <MapPin className="w-5 h-5 text-red-600 animate-pulse" />

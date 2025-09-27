@@ -118,6 +118,7 @@ const tourPackagesData: TourPackage[] = [
     exclusions: [
       "Personal expenses",
       "meals",
+      "Accommodation Not Included",
       
       "Travel insurance",
       "Alcoholic beverages",
@@ -231,7 +232,7 @@ const tourPackagesData: TourPackage[] = [
     exclusions: [
       "Personal expenses",
       "meals",
-      
+      "Accommodation Not Included",
       "Travel insurance",
       "Alcoholic beverages",
       "Items not mentioned in inclusions"
@@ -297,7 +298,7 @@ const tourPackagesData: TourPackage[] = [
     exclusions: [
       "Personal expenses",
       "meals",
-      
+      "Accommodation Not Included",
       "Travel insurance",
       "Alcoholic beverages",
       "Items not mentioned in inclusions"
@@ -369,7 +370,7 @@ const tourPackagesData: TourPackage[] = [
     exclusions: [
       "Personal expenses",
       "meals",
-      
+      "Accommodation Not Included",
       "Travel insurance",
       "Alcoholic beverages",
       "Items not mentioned in inclusions"
@@ -432,6 +433,7 @@ const tourPackagesData: TourPackage[] = [
     exclusions: [
       "Personal expenses",
       "meals",
+      "Accommodation Not Included",
       "Entrance fees to attractions",
       "Travel insurance",
       "Alcoholic beverages",
@@ -489,6 +491,7 @@ const tourPackagesData: TourPackage[] = [
     exclusions: [
       "Personal expenses",
       "meals",
+      "Accommodation Not Included",
       "Entrance fees to attractions",
       "Travel insurance",
       "Alcoholic beverages",
@@ -549,6 +552,7 @@ const tourPackagesData: TourPackage[] = [
     ],
     exclusions: [
       "Personal expenses",
+      "Accommodation Not Included",
       "meals",
       "Entrance fees to attractions",
       "Travel insurance",
@@ -605,6 +609,7 @@ const tourPackagesData: TourPackage[] = [
     ],
     exclusions: [
       "Personal expenses",
+      "Accommodation Not Included",
       "meals",
       "Entrance fees to attractions",
       "Travel insurance",
@@ -998,7 +1003,7 @@ export default function TourDetailPage() {
                       </Button>
                       <Button variant="outline" className="w-full justify-start text-sm sm:text-base">
                         <Mail className="w-4 h-4 mr-2" />
-                        Email: info@lankaumeshtours.com
+                        Email: lankaumeshtours@gmail.com
                       </Button>
                     </CardContent>
                   </Card>
@@ -1233,7 +1238,7 @@ export default function TourDetailPage() {
                         </Button>
                         <Button variant="outline" className="w-full border-green-300 hover:bg-green-50 text-base sm:text-lg py-4 sm:py-6">
                           <Mail className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
-                          Email: info@lankaumeshtours.com
+                          Email: lankaumeshtours@gmail.com
                         </Button>
                         <Button variant="outline" className="w-full border-green-300 hover:bg-green-50 text-base sm:text-lg py-4 sm:py-6">
                           <Phone className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
