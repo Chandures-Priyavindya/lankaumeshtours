@@ -66,85 +66,89 @@ const tourPackagesData: TourPackage[] = [
     id: 1,
     name: "Heritage, Natural & Wildlife",
     duration: "3 Days | 2 Nights",
-    price: "$150",
-    originalPrice: "$250",
+    price: "$395",
+    originalPrice: "$450",
     rating: 4.9,
     image: "/sigiriyarock.jpg",
     description: "Explore ancient temples, historic sites, and cultural wonders",
-    highlights: ["Pick up from Hikkaduwa/Galle/Mirissa","Udawalawa","Ella","Nuwara Eliya","Sigiriya Rock",  "Drop your pickup location"],
+    highlights: ["Pick up from Hikkaduwa/Galle/Mirissa","Udawalawa","Ella","Nuwara Eliya","Sigiriya Rock","Kandy",  "Drop your pickup location"],
     color: "from-green-500 to-green-600",
     iconColor: "text-green-600",
-    longDescription: "Embark on a captivating 3-day journey through Sri Lanka's most enchanting landscapes and cultural treasures. Begin from your down-south hotel and venture to the iconic Sigiriya Rock Fortress, a marvel of ancient engineering and artistry. Travel through the cool, misty hills of Nuwara Eliya, known for its lush tea plantations and colonial charm. Experience the thrill of a wildlife safari in Udawalawe National Park, home to majestic elephants and diverse wildlife, before returning to your down-south hotel with memories to last a lifetime.",
+    longDescription: "Experience the beauty of Sri Lanka in just 3 days with this exciting highlights tour that takes you from the Hikkaduwa, Galle, or Mirissa to the misty hills of Nuwara Eliya and the heart of the Cultural Triangle. Begin your journey with stops at Udawalawa, Ella, the iconic Nine Arch Bridge, Little Adam’s Peak, and a Spice Garden, with the chance to enjoy a scenic train ride before settling into Nuwara Eliya for the night. On the second day, discover the charm of Nuwara Eliya’s colonial landmarks such as the Post Office, stroll through Haggala or Victoria Botanical Garden, enjoy a tea experience at Ramboda, and continue your journey with a visit to either the Temple of the Tooth in Kandy or the unique Ambuluwawa Tower before heading to Sigiriya for your overnight stay. On the final day, climb the world-famous Sigiriya Rock Fortress, explore the stunning Dambulla Cave Temple, and conclude your adventure with a drop-off back at your hotel or starting location. This short but memorable tour is perfect for travelers who want to explore Sri Lanka’s nature, history, and culture in just a few days.",
     groupSize: "2-13 people(Minimum 2 people)",
     difficulty: "Easy",
     bestTime: "Any Months",
-    startLocation: "Pickup you Downsouth Hotels",
+    startLocation: "Pickup Hikkaduwa/Galle/Mirissa",
     endLocation: "Pickup Location",
     itinerary: [
       {
         day: 1,
-        title: "Pickup your Hotel & Nuwara Eliya",
+        title: "Pickup Hikkaduwa/Galle/Mirissa & Nuwara Eliya",
         description: "Welcome to Sri Lanka! Begin your cultural journey.",
-        activities: ["Pickup you Downsouth Hotel","Sigiriya Rock","Nuwara Eliya","OverNight at Nuwara Eliya"],
+        activities: ["Pickup you Hikkaduwa/Galle/Mirissa","Udawalawa","Ella","Nine Arch Bridge","Spice Garden","Little Adam's peak", "Train Ride (depend time)","Nuwara Eliya","Over Night Nuwara Eliya",],
         meals: ["Not Including"],
         accommodation: "Not Including"
       },
       {
         day: 2,
-        title: "Nuwara Eliya to Udawalawa",
+        title: "Nuwara Eliya to Sigiriya",
         description: "Travel to the Cultural Triangle and explore the magnificent Sigiriya Rock Fortress.",
-        activities: ["Nuwara Eliya Post Office", "Haggala or Victoria Botanical Garden","Ella","Nine Arch Bridge", "Overnight at Udawalawa"],
+        activities: ["Nuwara Eliya Post Office","Haggala or Victoria Botanical Garden","Ramboda Tea Plantation","Kandy Tooth Temple or Ambuluwawa Tower","Over Night Sigiriya",],
         meals: ["Not Including"],
         accommodation: "Not Including"
       },
       {
         day: 3,
-        title: "Morning Udawalawa Safari & Drop your Hotel",
+        title: "Sigiriya & Drop your Hotel",
         description: "Discover ancient cave temples and the medieval capital of Sri Lanka.",
-        activities: ["Udawalawa Safari","Including - Safari jeep and Udawalawa National Park entrance ticket"],
+        activities: ["Sigiriya Rock","Dambulla Cave Temple","Drop Your Pickup Location",],
         meals: ["Not Including"],
         accommodation: "Not Including"
       }
     ],
     inclusions: [
-      "Safari jeep and Udawalawa National Park entrance ticket",
+      "Safari Hilux jeep and Udawalawa National Park entrance ticket",
       "Parking Tickets",
+      "Dambulla Cave Temple entrance ticket",
+      "Sigiriya Rock entrance ticket",
+      "Train tickets",
       "English-speaking guide",
       "Air-conditioned vehicle",
     ],
     exclusions: [
       "Personal expenses",
       "meals",
-      "Entrance fees to attractions",
+      
       "Travel insurance",
       "Alcoholic beverages",
       "Items not mentioned in inclusions"
     ],
-    gallery: ["/heritage-1.jpg", "/heritage-2.jpg", "/heritage-3.jpg", "/heritage-4.jpg"]
+    gallery: ["/ride.webp", "/nuwaraeliya2.jpg", "/nuwaraeliyar.jpg", "/nuwaraeliyar.jpg"]
   },
   {
     id: 2,
     name: "Heritage and Hill Country tour",
     duration: "4 Days | 3 Nights",
-    price: "$649",
+    price: "$555 ",
     originalPrice: "$799",
     rating: 4.8,
     image: "/srilankawaterfall.jpg",
     description: "Explore Sri Lanka’s misty tea hills, scenic Ella, and the wildlife of Udawalawe in a perfect 4-day adventure.",
     highlights: [
       "Pickup Colombo Airport(CMB)",
-      "Sigiriya",
-      "Nuwara Eliya",
-      "Ella",
-      "Udawalawa",
-      "Drop Colombo Airport(CMB)",
+        "Sigiriya",
+        "Kandy",
+        "Nuwara Eliya",
+        "Ella",
+        "Udawalawa",
+        "Drop Colombo Airport(CMB) or Your Down South Hotel",
     ],
     color: "from-blue-400 to-blue-500",
     iconColor: "text-blue-600",
-    longDescription: "Journey through the soul of Sri Lanka with our Heritage & Hill Country Tour. Begin with a warm welcome at Colombo Airport before venturing into the cultural marvel of Sigiriya, where ancient kingdoms come alive. Breathe in the cool mountain air of Nuwara Eliya and soak in the charm of lush tea plantations, before continuing to Ella’s breathtaking landscapes and iconic viewpoints. Encounter incredible wildlife at Udawalawa National Park, where elephants roam free, before concluding your adventure with a smooth drop-off at Colombo Airport. This tour blends culture, nature, and adventure into an unforgettable Sri Lankan escape.",
+    longDescription: "Discover the best of Sri Lanka in 4 unforgettable days with this highlights tour that blends culture, nature, and breathtaking landscapes. Begin your adventure with a warm airport pickup from Colombo and head straight to the iconic Sigiriya, where you’ll spend your first night. The next morning, climb the majestic Sigiriya Rock Fortress, explore the palace ruins and museum, and continue to Kandy to visit the sacred Temple of the Tooth before enjoying a scenic drive through the hill country to Nuwara Eliya, the “Little England” of Sri Lanka, where you’ll visit tea plantations and stay overnight. On day three, explore the beauty of Nuwara Eliya with stops at the colonial Post Office, Lake Gregory, and either Victoria or Haggala Botanical Garden before heading to Ella to see the Nine Arches Bridge, hike Little Adam’s Peak, and stroll through the charming town, then continue to Udawalawa or Yala for your overnight stay. Your final day begins with a thrilling morning safari in Udawalawa or Yala National Park, where you’ll spot elephants and diverse wildlife, before returning to Colombo Airport or heading to your beach hotel in the south. This short yet adventure-filled journey is the perfect way to experience Sri Lanka’s most famous highlights in just four days.",
     groupSize: "2-12 people",
     difficulty: "Easy",
-    bestTime: "November - April",
+    bestTime: "Any Months",
     startLocation: "Colombo Airport(CMB)",
     endLocation: "Colombo Airport(CMB)",
     itinerary: [
@@ -155,9 +159,7 @@ const tourPackagesData: TourPackage[] = [
         activities: [
           "Airport pickup from Colombo (CMB)",
           "Drive to Sigiriya",
-          "Climb Sigiriya Rock Fortress",
-          "Explore the ancient palace ruins",
-          "Visit Sigiriya Museum",
+          
           "Overnight in Sigiriya area"
         ],
         meals: ["Not Including"],
@@ -168,11 +170,14 @@ const tourPackagesData: TourPackage[] = [
         title: "Sigiriya to Nuwara Eliya",
         description: "Travel from the cultural heartland to the misty highlands of Nuwara Eliya, famous for its tea plantations and colonial charm.",
         activities: [
-          "Early morning departure from Sigiriya",
+          "Climb Sigiriya Rock Fortress",
+          "Explore the ancient palace ruins",
+          "Visit Sigiriya Museum",
+          "Kandy Tooth Temple",
+          
           "Scenic drive through the hill country",
           "Tea plantation and tea factory visit",
-          "Nuwara Eliya city tour",
-          "Lake Gregory visit",
+          
           "Overnight in Nuwara Eliya"
         ],
         meals: ["Not Including"],
@@ -180,46 +185,53 @@ const tourPackagesData: TourPackage[] = [
       },
       {
         day: 3,
-        title: "Nuwara Eliya to Ella",
+        title: "Nuwara Eliya to Udawalawa or Yala",
         description: "Take in breathtaking mountain scenery and explore the charming town of Ella.",
         activities: [
-          "Scenic train ride from Nanu Oya to Ella",
+          "Nuwara Eliya Post Office",
+          "Lake Gregory visit",
+          "Victoria or Haggala Botanical Garden",
           "Visit Nine Arches Bridge",
           "Little Adam’s Peak hike",
+          "Spice Garden visit",
           "Explore Ella town",
-          "Overnight in Ella"
+          "Overnight in Udawalawa or Yala area"
         ],
         meals: ["Not Including"],
         accommodation: "Not Including"
       },
       {
         day: 4,
-        title: "Ella to Udawalawa & Departure",
+        title: "Udawalawa to Departure or your Down South Hotel",
         description: "Wrap up your journey with an exciting safari in Udawalawa National Park before returning to Colombo.",
         activities: [
-          "Early morning departure from Ella",
+          
           "Drive to Udawalawa",
-          "Morning wildlife safari in Udawalawa National Park",
+          "Morning wildlife safari in Udawalawa or yala national park",
           "Spot elephants and other wildlife",
-          "Drive back to Colombo",
+          
           "Drop-off at Colombo Airport (CMB)",
-          "Departure"
+          "Departure or Down South Hotel"
         ],
         meals: ["Not Including"],
         accommodation: "Not Including"
       }
     ],
 
-    gallery: ["/beach-1.jpg", "/beach-2.jpg", "/beach-3.jpg", "/beach-4.jpg"],
+    gallery: ["/ride.webp", "/elephant.jpg", "/elephant2.jpg", "/elephant3.jpg"],
     inclusions: [
+      "Safari Hilux jeep and Udawalawa or Yala National Park entrance ticket",
       "Parking Tickets",
+      "Dambulla Cave Temple entrance ticket",
+      "Sigiriya Rock entrance ticket",
+      "Train tickets",
       "English-speaking guide",
       "Air-conditioned vehicle",
     ],
     exclusions: [
       "Personal expenses",
       "meals",
-      "Entrance fees to attractions",
+      
       "Travel insurance",
       "Alcoholic beverages",
       "Items not mentioned in inclusions"
@@ -228,153 +240,158 @@ const tourPackagesData: TourPackage[] = [
   {
     id: 3,
     name: "Wildlife Adventure Safari",
-    duration: "6 Days | 5 Nights", 
-    price: "$759",
-    originalPrice: "$899",
+    duration: "1 Day", 
+    price: "$240 ",
+    originalPrice: "$270",
     rating: 4.7,
     image: "/udawalawa.jpg",
     description: "Encounter elephants, leopards, and exotic wildlife in their natural habitat",
     highlights: [
-      "Pickup Colombo Airport(CMB)",
-      "Anuradhapura", 
-      "Sigiriya",
-      "Kandy",
-      "Nuwara Eliya",
-      "Yala National Park or Udawalawa",
-      "Mirissa",
-      "Drop Colombo Airport(CMB)"
+      "Pickup from Hikkaduwa/Galle/Mirissa",
+        
+        
+        
+        "Yala National Park",
+        "Ella",
+        "Drop from Hikkaduwa/Galle/Mirissa",
     ],
     color: "from-green-600 to-green-700",
     iconColor: "text-green-600",
-    longDescription: "Embark on an extraordinary 6-day wildlife adventure across Sri Lanka's most pristine national parks and cultural sites. Start your journey from Colombo Airport and explore the ancient city of Anuradhapura, marvel at the iconic Sigiriya Rock Fortress, discover the cultural heart of Kandy, experience the cool climate of Nuwara Eliya's tea country, witness incredible wildlife at Yala National Park or Udawalawa, and conclude with the beautiful beaches of Mirissa before your departure from Colombo Airport.",
-    groupSize: "2-8 people (Minimum 2 people)",
-    difficulty: "Moderate", 
-    bestTime: "December - March",
-    startLocation: "Colombo Airport (CMB)",
-    endLocation: "Colombo Airport (CMB)",
+    longDescription: "Set off on an unforgettable 1-day adventure through Sri Lanka’s natural beauty and cultural charm. Begin with a pickup from Hikkaduwa, Galle, or Mirissa, then head for an exciting Yala Wildlife Safari, where you’ll spot elephants, leopards, and other incredible animals in their natural habitat. Continue your journey to Ella, one of Sri Lanka’s most scenic hill country towns, where you’ll visit the iconic Nine Arches Bridge, hike up the picturesque Little Adam’s Peak, and enjoy a breathtaking train ride from Haliela to Ella. On the way, stop at a Spice Garden to experience Sri Lanka’s fragrant flavors and traditional herbs. This one-day tour is perfect for travelers who want to experience wildlife, mountains, and culture all in a single adventure.",
+    groupSize: "2-13 people (Minimum 2 people)",
+    difficulty: "Easy", 
+    bestTime: "Any Months",
+    startLocation: "Pickup from hikkaduwa/Galle/Mirissa",
+    endLocation: "Drop from hikkaduwa/Galle/Mirissa",
     itinerary: [
       {
         day: 1,
-        title: "Arrival & Anuradhapura Ancient City",
+        title: "Pickup & Ella",
         description: "Welcome to Sri Lanka! Begin your adventure with ancient wonders.",
         activities: [
-          "Airport pickup from Colombo (CMB)",
-          "Drive to Anuradhapura", 
-          "Visit Ruwanwelisaya Stupa",
-          "Explore Jetavanaramaya",
-          "Sri Maha Bodhi Tree visit",
-          "Overnight in Anuradhapura"
-        ],
-        meals: ["Not Including"],
-        accommodation: "Not Including"
-      },
-      {
-        day: 2, 
-        title: "Anuradhapura to Sigiriya",
-        description: "Discover the magnificent rock fortress and its ancient palace ruins.",
-        activities: [
-          "Early morning departure to Sigiriya",
-          "Climb Sigiriya Rock Fortress", 
-          "Explore the ancient palace ruins",
-          "Visit Sigiriya Museum",
-          "Evening village tour",
-          "Overnight in Sigiriya area"
-        ],
-        meals: ["Not Including"],
-        accommodation: "Not Including"
-      },
-      {
-        day: 3,
-        title: "Sigiriya to Kandy via Dambulla",
-        description: "Journey to the cultural capital through the famous cave temples.",
-        activities: [
-          "Visit Dambulla Cave Temple",
-          "Drive to Kandy",
-          "Temple of the Tooth visit",
-          "Kandy Lake walk",
-          "Cultural dance show",
-          "Overnight in Kandy"
-        ],
-        meals: ["Not Including"], 
-        accommodation: "Not Including"
-      },
-      {
-        day: 4,
-        title: "Kandy to Nuwara Eliya",
-        description: "Experience the cool mountain air and lush tea plantations.",
-        activities: [
-          "Royal Botanical Gardens Peradeniya",
-          "Scenic drive to Nuwara Eliya",
-          "Tea factory and plantation visit", 
-          "Nuwara Eliya city tour",
-          "Lake Gregory visit",
-          "Overnight in Nuwara Eliya"
-        ],
-        meals: ["Not Including"],
-        accommodation: "Not Including"
-      },
-      {
-        day: 5,
-        title: "Nuwara Eliya to Yala/Udawalawa",
-        description: "Wildlife safari adventure in one of Sri Lanka's premier national parks.",
-        activities: [
-          "Early morning departure",
-          "Drive to Yala or Udawalawa",
-          "Check-in to safari lodge",
-          "Afternoon wildlife safari",
-          "Spot elephants, leopards, and exotic birds",
-          "Overnight near the national park"
-        ],
-        meals: ["Not Including"],
-        accommodation: "Not Including"
-      },
-      {
-        day: 6,
-        title: "Morning Safari & Departure via Mirissa",
-        description: "Final safari experience and beach relaxation before departure.",
-        activities: [
-          "Early morning safari",
-          "Drive to Mirissa Beach",
-          "Beach relaxation and lunch",
-          "Optional whale watching (seasonal)",
-          "Transfer to Colombo Airport",
-          "Departure"
+          "Pickup from Hikkaduwa/Galle/Mirissa",
+          "Yala Wildlife Safari",
+          "Ella",
+          "Nine Arches Bridge",
+          "Little Adam's Peak",
+          "Train Ride (Haliela to Ella)",
+          "Spice Garden",
+
+
+          
+          
+          
         ],
         meals: ["Not Including"],
         accommodation: "Not Including"
       }
     ],
     inclusions: [
+    "Safari Hilux jeep and Yala National Park entrance ticket",
+      "Train tickets",
       "Parking Tickets",
       "English-speaking guide",
       "Air-conditioned vehicle",
+      "Monkey feeding(Banana)",
     ],
     exclusions: [
       "Personal expenses",
       "meals",
-      "Entrance fees to attractions",
+      
       "Travel insurance",
       "Alcoholic beverages",
       "Items not mentioned in inclusions"
     ],
     gallery: [
-      "/wildlife-1.jpg", 
-      "/wildlife-2.jpg", 
-      "/wildlife-3.jpg", 
-      "/wildlife-4.jpg"
+      "/1day1.jpg", 
+      "/1day2.jpg", 
+      "/1day3.jpg", 
+      "/1day5.jpg"
     ]
   },
   {
     id: 4,
+    name: "Wildlife Adventure Safari Udawalawa",
+    duration: "1 Day", 
+    price: "$235 ",
+    originalPrice: "$270",
+    rating: 4.7,
+    image: "/udawalawa.jpg",
+    description: "Encounter elephants, leopards, and exotic wildlife in their natural habitat",
+    highlights: [
+      "Pickup from Hikkaduwa/Galle/Mirissa",
+        
+        
+        
+        "Udawalawa National Park",
+        "Ella",
+        "Drop from Hikkaduwa/Galle/Mirissa",
+    ],
+    color: "from-green-600 to-green-700",
+    iconColor: "text-green-600",
+    longDescription: "Set off on an unforgettable 1-day adventure through Sri Lanka’s natural beauty and cultural charm. Begin with a pickup from Hikkaduwa, Galle, or Mirissa, then head for an exciting Udawalawa Wildlife Safari, where you’ll spot elephants, leopards, and other incredible animals in their natural habitat. Continue your journey to Ella, one of Sri Lanka’s most scenic hill country towns, where you’ll visit the iconic Nine Arches Bridge, hike up the picturesque Little Adam’s Peak, and enjoy a breathtaking train ride from Haliela to Ella. On the way, stop at a Spice Garden to experience Sri Lanka’s fragrant flavors and traditional herbs. This one-day tour is perfect for travelers who want to experience wildlife, mountains, and culture all in a single adventure.",
+    groupSize: "2-13 people (Minimum 2 people)",
+    difficulty: "Easy", 
+    bestTime: "Any Months",
+    startLocation: "Pickup from hikkaduwa/Galle/Mirissa",
+    endLocation: "Drop from hikkaduwa/Galle/Mirissa",
+    itinerary: [
+      {
+        day: 1,
+        title: "Pickup & Ella",
+        description: "Welcome to Sri Lanka! Begin your adventure with ancient wonders.",
+        activities: [
+          "Pickup from Hikkaduwa/Galle/Mirissa",
+          "Udawalawa Wildlife Safari",
+          "Ella",
+          "Nine Arches Bridge",
+          "Little Adam's Peak",
+          "Train Ride (Haliela to Ella)",
+          "Spice Garden",
+
+
+          
+          
+          
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      }
+    ],
+    inclusions: [
+    "Safari Hilux jeep and Yala National Park entrance ticket",
+      "Train tickets",
+      "Parking Tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
+      "Monkey feeding(Banana)",
+    ],
+    exclusions: [
+      "Personal expenses",
+      "meals",
+      
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: [
+      "/1day1.jpg", 
+      "/1day2.jpg", 
+      "/1day3.jpg", 
+      "/1day5.jpg"
+    ]
+  },
+  {
+    id: 5,
     name: "Galle City Tour",
     duration: "1 Day", 
-    price: "",
+    price: "Customize Price",
     originalPrice: "",
     rating: 4.7,
     image: "/gallefort1.jpg",
     description: "Discover the charm of Galle — where history, culture, and coastal beauty meet.",
     highlights: [
-      "Pickup your downsouth Hotel",
+      "Pickup your Hotel",
       "Galle Fort", 
       "Koggala Lake Boat Safari",
       "Sea Turtle Hatchery",
@@ -384,10 +401,10 @@ const tourPackagesData: TourPackage[] = [
     color: "from-green-600 to-green-700",
     iconColor: "text-green-600",
     longDescription: "Embark on an unforgettable journey through the southern charm of Sri Lanka! Start with a convenient pickup from your down-south hotel and step into the UNESCO World Heritage Galle Fort, where colonial history whispers through every street. Glide across the serene waters of Koggala Lake on a boat safari, spot exotic wildlife, and witness the timeless tradition of Sri Lanka’s famous stick fishermen. Visit a Sea Turtle Hatchery to see conservation in action before ending your day with a safe drop-off at your hotel. A perfect blend of culture, nature, and coastal beauty — all in one tour!",
-    groupSize: "2-8 people (Minimum 2 people)",
+    groupSize: "2-13 people (Minimum 2 people)",
     difficulty: "Very Easy", 
     bestTime: "12 Months",
-    startLocation: "Pickup your downsouth Hotel",
+    startLocation: "Pickup your Hotel",
     endLocation: "Drop your Pickup Location",
     itinerary: [
   {
@@ -395,7 +412,7 @@ const tourPackagesData: TourPackage[] = [
     title: "Galle City Tour",
     description: "Explore the charm of Sri Lanka’s southern coast with history, culture, and nature in one unforgettable day.",
     activities: [
-      "Pickup from your down-south hotel",
+      "Pickup from your  hotel",
       "Visit the UNESCO World Heritage Galle Fort",
       "Enjoy a scenic Koggala Lake Boat Safari",
       "Visit the Sea Turtle Hatchery and learn about conservation",
@@ -421,17 +438,17 @@ const tourPackagesData: TourPackage[] = [
       "Items not mentioned in inclusions"
     ],
     gallery: [
-      "/wildlife-1.jpg", 
-      "/wildlife-2.jpg", 
-      "/wildlife-3.jpg", 
-      "/wildlife-4.jpg"
+      "/turtle.jpg", 
+      "/turtle1.jpg", 
+      "/turtle4.jpg", 
+      "/turtle3.jpg"
     ]
   },
   {
-    id: 5,
+    id: 6,
     name: "Madu River Boart Safari",
     duration: "1 Day", 
-    price: "",
+    price: "Customize",
     originalPrice: "",
     rating: 4.7,
     image: "/maduriver.jpg",
@@ -442,10 +459,10 @@ const tourPackagesData: TourPackage[] = [
     color: "from-green-600 to-green-700",
     iconColor: "text-green-600",
     longDescription: "Escape into the heart of Sri Lanka’s natural beauty with the Madu River Boat Safari. Begin with a convenient pickup from your down-south hotel before drifting through the lush mangrove forests and winding waterways of the Madu River. Discover hidden islands, spot exotic birds and wildlife, and feel the serenity of this tropical paradise. End your adventure with a comfortable drop-off at your hotel — a day filled with relaxation, exploration, and unforgettable memories.",
-    groupSize: "2-8 people (Minimum 2 people)",
+    groupSize: "2-13 people (Minimum 2 people)",
     difficulty: "Very Easy", 
     bestTime: "12 Months",
-    startLocation: "Pickup your downsouth Hotel",
+    startLocation: "Pickup your Hotel",
     endLocation: "Drop your Pickup Location",
     itinerary: [
   {
@@ -478,33 +495,33 @@ const tourPackagesData: TourPackage[] = [
       "Items not mentioned in inclusions"
     ],
     gallery: [
-      "/wildlife-1.jpg", 
-      "/wildlife-2.jpg", 
-      "/wildlife-3.jpg", 
-      "/wildlife-4.jpg"
+      "/maduiver3.jpg", 
+      "/maduriver1.jpg", 
+      "/maduriver2.jpg", 
+      "/maduriver4.jpg"
     ]
   },
   {
-    id: 6,
+    id: 7,
     name: "Mirissa Whale Watching",
     duration: "1 Day", 
-    price: "",
+    price: "Customize",
     originalPrice: "",
     rating: 4.7,
     image: "/whaleswatching.jpg",
     description: "Mirissa Whale Watching: Witness the majestic blue whales and dolphins",
     highlights: [
-      "Pickup from Downsouth hotel",
+      "Pickup from  hotel",
       "Mirissa Whale Watching",
       "Drop your Pickup Location",
     ],
     color: "from-green-600 to-green-700",
     iconColor: "text-green-600",
     longDescription: "Set sail on an unforgettable adventure in Mirissa, Sri Lanka’s world-famous whale watching paradise! Begin with a convenient pickup from your down-south hotel and cruise into the sparkling Indian Ocean. Keep your eyes open for the majestic blue whales, playful dolphins, and other incredible marine life that call these waters home. After an awe-inspiring morning at sea, return safely and comfortably to your hotel — a once-in-a-lifetime ocean experience you’ll never forget",
-    groupSize: "2-8 people (Minimum 2 people)",
+    groupSize: "2-13 people (Minimum 2 people)",
     difficulty: "Very Easy", 
     bestTime: "12 Months",
-    startLocation: "Pickup your downsouth Hotel",
+    startLocation: "Pickup your Hotel",
     endLocation: "Drop your Pickup Location",
     itinerary: [
   {
@@ -512,7 +529,7 @@ const tourPackagesData: TourPackage[] = [
     title: "Mirissa Whale Watching",
     description: "Experience the thrill of Sri Lanka’s southern seas as you set out in search of majestic whales and playful dolphins in their natural habitat.",
     activities: [
-      "Pickup from your down-south hotel",
+      "Pickup from your hotel",
       "Set sail on a Mirissa Whale Watching cruise",
       "Spot blue whales, sperm whales, dolphins, and other marine life",
       "Return to Mirissa harbor",
@@ -539,17 +556,17 @@ const tourPackagesData: TourPackage[] = [
       "Items not mentioned in inclusions"
     ],
     gallery: [
-      "/wildlife-1.jpg", 
-      "/wildlife-2.jpg", 
-      "/wildlife-3.jpg", 
-      "/wildlife-4.jpg"
+      "/whaleswatching.jpg", 
+      "/whaleswatching1.jpg", 
+      "/whaleswatching2.jpg", 
+      "/whaleswatching3.jpg"
     ]
   },
   {
-    id: 7,
+    id: 8,
     name: "Airport Drop and Pickup",
     duration: "1 Day", 
-    price: "",
+    price: "Customize",
     originalPrice: "",
     rating: 4.7,
     image: "/airportdrop.jpg",
@@ -558,7 +575,7 @@ const tourPackagesData: TourPackage[] = [
     color: "from-green-600 to-green-700",
     iconColor: "text-green-600",
     longDescription: "Start and end your Sri Lankan journey with comfort and peace of mind. Our reliable airport pickup and drop-off service from Colombo International Airport (CMB) ensures a smooth travel experience. Whether you’re arriving for your dream holiday or heading home after an unforgettable stay, we’ll be there on time with a safe, friendly, and hassle-free ride — because your journey matters from the very first step.",
-    groupSize: "2-8 people (Minimum 2 people)",
+    groupSize: "2-13 people (Minimum 2 people)",
     difficulty: "Very Easy", 
     bestTime: "12 Months",
     startLocation: "Pickup Colombo Airport(CMB),Drop Colombo Airport(CMB)",
@@ -836,7 +853,7 @@ export default function TourDetailPage() {
                       </span>
                     )}
                     <span className="text-3xl font-bold text-green-600">{tour.price}</span>
-                    <span className="text-gray-500 ml-1">per person</span>
+                    <span className="text-gray-500 ml-1">per person All Including</span>
                   </div>
                   <Button 
                     size="lg" 
