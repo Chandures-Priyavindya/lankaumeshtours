@@ -484,18 +484,20 @@ const handleSubmitToWhatsApp = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2 animate-fade-in-left">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center animate-pulse-glow">
-                <img
-                  src="/Lankaumeshtours.png"
-                  alt="Lankaumeshtours Logo"
-                  className="w-8 h-8 object-contain"
-                />
-              </div>
-              <span className="text-2xl font-bold text-gray-800">
-                lankaumeshtours
-              </span>
-            </div>
+            
+<div className="flex items-center space-x-3 animate-fade-in-left">
+  {/* Adjust the navbar padding to py-2 or py-3 in the parent div for better proportions */}
+  <div className="h-16 w-16 md:h-20 md:w-20 bg-gradient-to-r from-blue-600 to-green-600 rounded-xl flex items-center justify-center animate-pulse-glow shadow-lg">
+    <img
+      src="/Lankaumeshtours.png"
+      alt="Lankaumeshtours Logo"
+      className="h-14 w-14 md:h-18 md:w-18 object-contain"
+    />
+  </div>
+  <span className="text-2xl md:text-3xl font-bold text-gray-800">
+    lankaumeshtours
+  </span>
+</div>
 
             <div className="hidden md:flex space-x-8">
               {[
