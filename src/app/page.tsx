@@ -226,12 +226,12 @@ const handleSubmitToWhatsApp = () => {
       description:
         "Discover Sri Lanka’s timeless treasures, from majestic rock fortresses to misty tea country and wild safaris.",
       highlights: [
-        "Pickup you Downsouth Hotels",
+        
         "Sigiriya Rock",
         "Nuwara Eliya",
         "Ella",
         "Udawalawa",
-        "Drop you Downsouth Hotels",
+        "Drop your pickup location",
       ],
       color: "from-green-500 to-green-600",
       iconColor: "text-green-600",
@@ -247,7 +247,7 @@ const handleSubmitToWhatsApp = () => {
       description:
         "Explore Sri Lanka’s misty tea hills, scenic Ella, and the wildlife of Udawalawe in a perfect 4-day adventure.",
       highlights: [
-        "Pickup Colombo Airport(CMB)",
+        
         "Sigiriya",
         "Nuwara Eliya",
         "Ella",

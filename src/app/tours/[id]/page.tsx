@@ -71,7 +71,7 @@ const tourPackagesData: TourPackage[] = [
     rating: 4.9,
     image: "/sigiriyarock.jpg",
     description: "Explore ancient temples, historic sites, and cultural wonders",
-    highlights: ["Pickup you Downsouth Hotels","Sigiriya Rock", "Nuwara Eliya","Ella", "Udawalawa","Drop you Downsouth Hotels"],
+    highlights: ["Pick up from Hikkaduwa/Galle/Mirissa","Udawalawa","Ella","Nuwara Eliya","Sigiriya Rock",  "Drop your pickup location"],
     color: "from-green-500 to-green-600",
     iconColor: "text-green-600",
     longDescription: "Embark on a captivating 3-day journey through Sri Lanka's most enchanting landscapes and cultural treasures. Begin from your down-south hotel and venture to the iconic Sigiriya Rock Fortress, a marvel of ancient engineering and artistry. Travel through the cool, misty hills of Nuwara Eliya, known for its lush tea plantations and colonial charm. Experience the thrill of a wildlife safari in Udawalawe National Park, home to majestic elephants and diverse wildlife, before returning to your down-south hotel with memories to last a lifetime.",
@@ -83,7 +83,7 @@ const tourPackagesData: TourPackage[] = [
     itinerary: [
       {
         day: 1,
-        title: "Pickup & Nuwara Eliya",
+        title: "Pickup your Hotel & Nuwara Eliya",
         description: "Welcome to Sri Lanka! Begin your cultural journey.",
         activities: ["Pickup you Downsouth Hotel","Sigiriya Rock","Nuwara Eliya","OverNight at Nuwara Eliya"],
         meals: ["Not Including"],
@@ -101,12 +101,13 @@ const tourPackagesData: TourPackage[] = [
         day: 3,
         title: "Morning Udawalawa Safari & Drop your Hotel",
         description: "Discover ancient cave temples and the medieval capital of Sri Lanka.",
-        activities: ["Udawalawa Safari"],
+        activities: ["Udawalawa Safari","Including - Safari jeep and Udawalawa National Park entrance ticket"],
         meals: ["Not Including"],
         accommodation: "Not Including"
       }
     ],
     inclusions: [
+      "Safari jeep and Udawalawa National Park entrance ticket",
       "Parking Tickets",
       "English-speaking guide",
       "Air-conditioned vehicle",
