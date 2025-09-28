@@ -1045,7 +1045,7 @@ const handleSubmitToWhatsApp = () => {
             </div>
             <div className="flex items-center space-x-3 hover-lift">
               <MapPin className="w-5 h-5 text-red-600 animate-pulse" />
-              <span>Koggala, Sri Lanka</span>
+              <span>Colombo, Sri Lanka</span>
             </div>
           </CardContent>
         </Card>

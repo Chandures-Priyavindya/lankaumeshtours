@@ -97,10 +97,10 @@ function BookingFormContent() {
   ];
 
   const tourPackages = [
-    "Heritage, Natural & Wildlife",
-    "Heritage and Hill Country tour",
-    "Wildlife Adventure Safari",
-    "Wildlife Adventure Safari Udawalawa",
+    "Heritage, Natural & Wildlife -$395",
+    "Heritage and Hill Country tour -$555",
+    "Wildlife Adventure Safari -$240",
+    "Wildlife Adventure Safari Udawalawa -$235",
     "Galle City Tour",
     "Madu River Boat Safari",
     "Mirissa Whale Watching",
@@ -534,7 +534,7 @@ Message: ${formData.message}
                       Location
                     </p>
                     <p className="text-sm text-orange-700">
-                      Koggala, Sri Lanka
+                      Colombo, Sri Lanka
                     </p>
                   </div>
                 </div>
