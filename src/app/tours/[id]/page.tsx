@@ -1,5 +1,5 @@
 'use client';
-
+import type { Metadata } from "next";
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
@@ -28,6 +28,63 @@ import {
   Menu,
   X
 } from 'lucide-react';
+
+// This function should be placed outside your TourDetailPage component, 
+// usually at the top of the file, replacing the placeholder 'export const metadata'.
+
+
+
+// --- START: SEO OPTIMIZED METADATA ---
+export const metadata: Metadata = {
+  // 1. PRIMARY TITLE TAG: Global intent + Location + Value + Brand
+  title: "Sri Lanka Tour Packages 2025 | Culture, Wildlife & Beach Holidays | Lanka Umesh Tours",
+  
+  // 2. META DESCRIPTION: Compelling, keyword-rich, and globally focused
+  description: "Book your dream Sri Lanka holiday! Discover the best customizable tour packages for global travelers: explore Sigiriya, Kandy, Ella, Yala Safari, and pristine beaches. Trusted local operator.",
+  
+  // 3. KEYWORDS: Essential for identifying topic to search engines (though less important than Title/Description)
+  keywords: [
+    "Sri Lanka tour packages", 
+    "Sri Lanka holidays", 
+    "Sri Lanka vacation packages",
+    "best Sri Lanka travel itinerary",
+    "Ella tours", 
+    "Sigiriya tours", 
+    "Yala safari packages",
+    "travel to Sri Lanka from USA", // Targeting global specific intent
+    "Sri Lanka private tours",
+    "Lanka Umesh Tours" // Brand name for branded searches
+  ],
+  
+  // 4. AUTHOR/CREATOR: Use the official company name
+  authors: [{ name: "Lanka Umesh Tours" }],
+  
+  // 5. OPEN GRAPH (Social Media Sharing - Facebook, LinkedIn, etc.)
+  openGraph: {
+    title: "Best Sri Lanka Tour Packages & Holidays | Lanka Umesh Tours",
+    description: "Discover custom 3-day, 4-day, and full Sri Lanka tours covering culture, hill country, and wildlife safaris. Start your unforgettable island adventure here.",
+    url: "https://www.lankaumeshtours.com", // IMPORTANT: Replace with your actual domain (e.g., https://www.lankaumeshtours.com)
+    siteName: "Lanka Umesh Tours",
+    type: "website",
+    // Adding a high-quality image URL dramatically increases social media click-through rates (CTR)
+    // images: [{ url: "URL_TO_A_STUNNING_SRI_LANKA_IMAGE_FOR_SOCIAL_MEDIA" }],
+  },
+  
+  // 6. TWITTER CARDS (X / Twitter Sharing)
+  twitter: {
+    card: "summary_large_image", // Use 'summary_large_image' for a rich preview
+    title: "Dream Sri Lanka Tours | Culture, Safari, & Beach Packages",
+    description: "Customizable tours across Sri Lanka: Sigiriya, Kandy, Ella, and Yala. Trusted service for your 2025 holiday.",
+    // image: "URL_TO_A_STUNNING_SRI_LANKA_IMAGE_FOR_SOCIAL_MEDIA",
+  },
+
+  // 7. VIEWPORT (Modern standard for mobile responsiveness)
+  viewport: "width=device-width, initial-scale=1.0",
+  
+  // 8. ROBOTS (Tells search engines how to crawl the page. Usually just 'index, follow' is best)
+  robots: "index, follow",
+};
+// --- END: SEO OPTIMIZED METADATA ---
 
 interface TourPackage {
   id: number;

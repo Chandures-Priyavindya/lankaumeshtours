@@ -10,61 +10,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/tours/1`,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/tours/2`,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/tours/3`,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/tours/4`,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/tours/5`,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/tours/6`,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/tours/7`,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'yearly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/tours/8`,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'yearly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/booking`,
-      lastModified: new Date('2024-01-15'),
+      lastModified: new Date('2025-09-28'),
       changeFrequency: 'yearly' as const,
       priority: 0.8,
     },
@@ -73,7 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic tour pages
   const tourPages = tourIds.map((id) => ({
     url: `${baseUrl}/tours/${id}`,
-    lastModified: new Date('2024-01-15'),
+    lastModified: new Date('2025-09-28'),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
@@ -88,49 +88,49 @@ export const tourData = [
     id: 1,
     slug: 'heritage-natural-wildlife',
     name: 'Heritage, Natural & Wildlife',
-    lastModified: '2024-01-15'
+    lastModified: '2025-09-28'
   },
   {
     id: 2,
     slug: 'heritage-hill-country',
     name: 'Heritage and Hill Country tour',
-    lastModified: '2024-01-15'
+    lastModified: '2025-09-28'
   },
   {
     id: 3,
     slug: 'wildlife-safari-yala',
     name: 'Wildlife Adventure Safari',
-    lastModified: '2024-01-15'
+    lastModified: '2025-09-28'
   },
   {
     id: 4,
     slug: 'wildlife-safari-udawalawa',
     name: 'Wildlife Adventure Safari Udawalawa',
-    lastModified: '2024-01-15'
+    lastModified: '2025-09-28'
   },
   {
     id: 5,
     slug: 'galle-city-tour',
     name: 'Galle City Tour',
-    lastModified: '2024-01-15'
+    lastModified: '2025-09-28'
   },
   {
     id: 6,
     slug: 'madu-river-safari',
     name: 'Madu River Boat Safari',
-    lastModified: '2024-01-15'
+    lastModified: '2025-09-28'
   },
   {
     id: 7,
     slug: 'mirissa-whale-watching',
     name: 'Mirissa Whale Watching',
-    lastModified: '2024-01-15'
+    lastModified: '2025-09-28'
   },
   {
     id: 8,
     slug: 'airport-transfer',
     name: 'Airport Drop and Pickup',
-    lastModified: '2024-01-15'
+    lastModified: '2025-09-28'
   }
 ]
 

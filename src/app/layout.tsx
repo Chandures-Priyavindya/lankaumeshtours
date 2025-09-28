@@ -15,22 +15,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lanka Umesh Tours",
-  description: "Modern Next.js scaffold optimized.. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Sri Lanka Tour Packages | Best Travel & Holiday Deals - Lanka Umesh Tours",
+  description: "Discover the best Sri Lanka tour packages for unforgettable holidays. Customizable itineraries, expert guides, and great deals on culture, nature, and beach tours across Sri Lanka.",
+  keywords: ["Sri Lanka tour packages", "travel Sri Lanka", "Sri Lanka holidays", "custom Sri Lanka tours", "tour operators Sri Lanka", "best Sri Lanka travel deals", "Sri Lanka vacation packages", "Lanka Umesh Tours"],
+  authors: [{ name: "Lanka Umesh Tours Team" }],
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Sri Lanka Tour Packages | Best Travel & Holiday Deals - Lanka Umesh Tours",
+    description: "Discover the best Sri Lanka tour packages for unforgettable holidays. Customizable itineraries, expert guides, and great deals on culture, nature, and beach tours across Sri Lanka.",
+    url: "https://www.lankaumeshtours.com/", // **MUST UPDATE THIS**
+    siteName: "Lanka Umesh Tours",
     type: "website",
+    // Consider adding an image property for Open Graph to display an appealing picture of Sri Lanka
+    // image: "URL_TO_A_HIGH_QUALITY_SRI_LANKA_IMAGE", 
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Sri Lanka Tour Packages | Best Travel & Holiday Deals - Lanka Umesh Tours",
+    description: "Discover the best Sri Lanka tour packages for unforgettable holidays. Customizable itineraries, expert guides, and great deals on culture, nature, and beach tours across Sri Lanka.",
   },
+
 };
 
 export default function RootLayout({
