@@ -75,8 +75,8 @@ const tourPackagesData: TourPackage[] = [
     id: 1,
     name: "Heritage, Natural & Wildlife",
     duration: "3 Days | 2 Nights",
-    price: "$395",
-    originalPrice: "$450",
+    price: "$560",
+    originalPrice: "$600",
     rating: 4.9,
     image: "/sigiriyarock.jpg",
     description: "Explore ancient temples, historic sites, and cultural wonders",
@@ -139,8 +139,8 @@ const tourPackagesData: TourPackage[] = [
     id: 2,
     name: "Heritage and Hill Country tour",
     duration: "4 Days | 3 Nights",
-    price: "$555 ",
-    originalPrice: "$799",
+    price: "$730 ",
+    originalPrice: "$800",
     rating: 4.8,
     image: "/srilankawaterfall.jpg",
     description: "Explore Sri Lanka’s misty tea hills, scenic Ella, and the wildlife of Udawalawe in a perfect 4-day adventure.",
@@ -251,8 +251,8 @@ const tourPackagesData: TourPackage[] = [
     id: 3,
     name: "Wildlife Adventure Safari",
     duration: "1 Day", 
-    price: "$240 ",
-    originalPrice: "$270",
+    price: "$450 ",
+    originalPrice: "$480",
     rating: 4.7,
     image: "/udawalawa.jpg",
     description: "Encounter elephants, leopards, and exotic wildlife in their natural habitat",
@@ -323,8 +323,8 @@ const tourPackagesData: TourPackage[] = [
     id: 4,
     name: "Wildlife Adventure Safari Udawalawa",
     duration: "1 Day", 
-    price: "$235 ",
-    originalPrice: "$270",
+    price: "$435 ",
+    originalPrice: "$460",
     rating: 4.7,
     image: "/udawalawa.jpg",
     description: "Encounter elephants, leopards, and exotic wildlife in their natural habitat",
@@ -816,7 +816,7 @@ export default function TourDetailPage() {
                       </span>
                     )}
                     <span className="text-2xl sm:text-3xl font-bold text-green-600">{tour.price}</span>
-                    <span className="text-gray-500 ml-1 text-sm">/person</span>
+                    <span className="text-gray-500 ml-1 text-sm">/02 persons</span>
                   </div>
                   <Button 
                     size="sm" 
@@ -867,7 +867,7 @@ export default function TourDetailPage() {
                       </span>
                     )}
                     <span className="text-3xl font-bold text-green-600">{tour.price}</span>
-                    <span className="text-gray-500 ml-1">per person All Including</span>
+                    <span className="text-gray-500 ml-1">02 persons All Including</span>
                   </div>
                   <Button 
                     size="lg" 
@@ -1229,7 +1229,7 @@ export default function TourDetailPage() {
                             <span className="font-semibold text-sm sm:text-base">{tour.duration}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-gray-600 text-sm sm:text-base">Price per person:</span>
+                            <span className="text-gray-600 text-sm sm:text-base">Price 02 persons:</span>
                             <span className="font-semibold text-green-600 text-sm sm:text-base">{tour.price}</span>
                           </div>
                         </div>
@@ -1312,7 +1312,7 @@ export default function TourDetailPage() {
               )}
               <span className="text-xl font-bold text-green-600">{tour.price}</span>
             </div>
-            <span className="text-xs text-gray-500">per person</span>
+            <span className="text-xs text-gray-500">02 persons</span>
           </div>
           <Button 
             className={`bg-gradient-to-r ${tour.color} hover:shadow-lg flex-1 max-w-[200px]`}
