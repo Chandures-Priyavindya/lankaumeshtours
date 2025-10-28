@@ -97,11 +97,11 @@ function BookingFormContent() {
   ];
 
   const tourPackages = [
-    "Heritage, Natural & Wildlife -$395",
-    "Heritage and Hill Country tour -$555",
-    "Wildlife Adventure Safari -$240",
-    "Wildlife Adventure Safari Udawalawa -$235",
-    "Galle City Tour",
+    "Heritage, Natural & Wildlife -$560",
+    "Heritage and Hill Country tour -$730",
+    "Wildlife Adventure Safari -$450",
+    "Wildlife Adventure Safari Udawalawa -$435",
+    "Galle City Tour- $120",
     "Madu River Boat Safari",
     "Mirissa Whale Watching",
     "Airport Drop and Pickup",
