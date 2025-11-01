@@ -222,6 +222,93 @@ export default function Home() {
   const tourPackages = [
     {
       id: 1,
+      name: "Ella one Day Tour",
+      duration: "1 Day",
+      price: "$180 All Included 02persons",
+      originalPrice: "$200",
+      rating: 5.0,
+      image: "/Ella.jpg",
+      description:
+        "Discover the breathtaking beauty of Ella — a hill country paradise surrounded by lush tea plantations, misty mountains, and cascading waterfalls.",
+      highlights: [
+        "Galle",
+        "Unawatuna",
+        "Weligama",
+        "Mirissa",
+        
+      ],
+      color: "from-green-500 to-green-600",
+      iconColor: "text-green-600",
+    },
+    {
+      id: 2,
+      name: "Yala Wildlife Adventure Safari",
+      duration: "1 Day",
+      price: "$260 All Included 02persons",
+      originalPrice: "$300",
+      rating: 4.7,
+      image: "/tiger.jpg",
+      description: "Yala Safari - 1 Day",
+      highlights: [
+        "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+        
+
+        "Yala National Park",
+        
+        "Drop your Pickup location",
+      ],
+      color: "from-green-600 to-green-700",
+      iconColor: "text-green-600",
+    },
+    {
+      id: 3,
+      name: "Udawalawa Wildlife Safari",
+      duration: "1 Day",
+      price: "$250 All Included 02persons",
+      originalPrice: "$300",
+      rating: 4.9,
+      image: "/safari jip.jpg",
+      description: "Udawalawa Safari - 1 Day",
+      highlights: [
+        "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+        
+
+        "Udawalawa National Park",
+        
+        "Drop your Pickup location",
+      ],
+      color: "from-green-600 to-green-700",
+      iconColor: "text-green-600",
+    },
+    {
+      id: 4,
+      name: "Ella and Sigiriya",
+      duration: "2 Days | 1 Night",
+      price: "$295 All Included 02persons",
+      originalPrice: "$300",
+      rating: 4.9,
+      image: "/sigiriyaella.png",
+      description: "Ella and Sigiriya",
+      highlights: [
+        "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+        
+
+        "Ella Train ride ",
+        "Rawana Waterfall ",
+        "Nine Arches Bridge ",
+        "spice Garden ",
+        "little Adam's Peak ",
+        "Ambuluwawa tower ",
+        "Sigiriya Rock ",
+        "Dambull Cave Temple ",
+        
+        "Drop your Pickup location",
+      ],
+      color: "from-green-600 to-green-700",
+      iconColor: "text-green-600",
+    },
+    {
+      id: 5,
       name: "Heritage, Natural & Wildlife",
       duration: "3 Days | 2 Nights",
       price: "$560 All Included 02persons",
@@ -241,7 +328,7 @@ export default function Home() {
       iconColor: "text-green-600",
     },
     {
-      id: 2,
+      id: 6,
       name: "Heritage and Hill Country tour",
       duration: "4 Days | 3 Nights",
       price: "$730 All Included 02persons",
@@ -263,7 +350,7 @@ export default function Home() {
       iconColor: "text-green-600",
     },
     {
-      id: 3,
+      id: 7,
       name: "Wildlife Adventure Safari",
       duration: "1 Day",
       price: "$450 All Included 02persons",
@@ -286,7 +373,7 @@ export default function Home() {
       iconColor: "text-green-600",
     },
     {
-      id: 4,
+      id: 8,
       name: "Wildlife Adventure Safari Udawalawa",
       duration: "1 Day",
       price: "$435 All Included 02persons",
@@ -309,7 +396,7 @@ export default function Home() {
       iconColor: "text-green-600",
     },
     {
-      id: 5,
+      id: 9,
       name: "Galle City Tour",
       duration: "1 Day",
       price: "$120 for 02 persons ",
@@ -319,7 +406,7 @@ export default function Home() {
       description:
         "Galle City Tour: Explore the historic Galle Fort, Koggala Lake, and more",
       highlights: [
-        "Pickup your hotel(Mirissa,Weligama,Unawatuna,Galle )",
+        "Pickup your hotel(Mirissa,Weligama,Unawatuna,Galle ",
         "Galle Fort",
         "Koggala Lake Boat Safari",
         "Gem Museum",
@@ -332,17 +419,17 @@ export default function Home() {
       iconColor: "text-green-600",
     },
     {
-      id: 6,
+      id: 10,
       name: "Madu River Boart Safari",
       duration: "1 Day",
-      price: "Customize Price perperson",
+      price: "$145 02 persons",
       originalPrice: "",
       rating: 4.9,
       image: "/maduriver.jpg",
       description:
         "Madu River Boat Safari: Experience the serene beauty of Madu River",
       highlights: [
-        "Pickup your hotel",
+        "Pickup your hotel Mirissa,Weligama,Unawatuna,Galle,Hikkaduwa ",
         "Madu River",
         "Drop your Pickup Location",
       ],
@@ -350,7 +437,7 @@ export default function Home() {
       iconColor: "text-green-600",
     },
     {
-      id: 7,
+      id: 11,
       name: "Mirissa Whale Watching",
       duration: "1 Day",
       price: "Customize",
@@ -368,7 +455,7 @@ export default function Home() {
       iconColor: "text-green-600",
     },
     {
-      id: 8,
+      id: 12,
       name: "Airport Drop and Pickup",
       duration: "1 Day",
       price: "Customize",

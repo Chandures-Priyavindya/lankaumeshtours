@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 import type { Metadata } from "next";
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
@@ -73,6 +73,264 @@ interface TourPackage {
 const tourPackagesData: TourPackage[] = [
   {
     id: 1,
+    name: "Ella one Day Tour",
+    duration: "1 Day",
+    price: "$180",
+    originalPrice: "$250",
+    rating: 5.0,
+    image: "/Ella.jpg",
+    description: "Discover the breathtaking beauty of Ella — a hill country paradise surrounded by lush tea plantations, misty mountains, and cascading waterfalls.",
+    highlights: ["Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa","Train ride","Ravana Water fall","Nine Arch","Spice Garden","Little Adam Peak",  "Drop your pickup location"],
+    color: "from-green-500 to-green-600",
+    iconColor: "text-green-600",
+    longDescription: "Discover the breathtaking beauty of Ella — a hill country paradise surrounded by lush tea plantations, misty mountains, and cascading waterfalls.",
+    groupSize: "2-13 people(Minimum 2 people)",
+    difficulty: "Easy",
+    bestTime: "Any Months",
+    startLocation: "Pickup Hikkaduwa|Galle|Unawatuna|Waligama|Mirissa",
+    endLocation: "Pickup Location",
+    itinerary: [
+      {
+        day: 1,
+        title: "Pickup Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+        description: "Discover the breathtaking beauty of Ella — a hill country paradise surrounded by lush tea plantations, misty mountains, and cascading waterfalls..",
+        activities: ["Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa","Train ride","Ravana Water fall","Nine Arch","Spice Garden","Little Adam Peak",  "Drop your pickup location",],
+        meals: ["Including"],
+        accommodation: "Not Including"
+      },
+      
+    ],
+    inclusions: [
+      
+      "Parking Tickets",
+      "Optional extras include lunch at a cafe",
+      "Entrance ticket",
+      "Train tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
+    ],
+    exclusions: [
+      "Personal expenses",
+      "Personal Activities",
+      
+      
+      "Accommodation Not Included",
+      
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: ["/ride.webp", "/nuwaraeliya2.jpg", "/nuwaraeliyar.jpg", "/nuwaraeliyar.jpg"]
+  },
+  {
+    id: 2,
+    name: "Yala Wildlife Adventure Safari",
+    duration: "1 Day", 
+    price: "$260 ",
+    originalPrice: "$300",
+    rating: 4.7,
+    image: "/tiger.jpg",
+    description: "Yala Safari - 1 Day",
+    highlights: [
+      "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+        
+        
+        
+        "Yala National Park",
+        
+        "Drop your pickup location",
+    ],
+    color: "from-green-600 to-green-700",
+    iconColor: "text-green-600",
+    longDescription: "Yala Safari - 1 Day",
+    groupSize: "2-13 people (Minimum 2 people)",
+    difficulty: "Easy", 
+    bestTime: "Any Months",
+    startLocation: "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+    endLocation: "Drop your pickup location",
+    itinerary: [
+      {
+        day: 1,
+        title: "Yala Wildlife Adventure Safari",
+        description: "Yala Safari - 1 Day",
+        activities: [
+          "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+          "Yala Wildlife Safari",
+          
+
+
+          
+          
+          
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      }
+    ],
+    inclusions: [
+    "Safari Hilux jeep and Yala National Park entrance ticket",
+      
+      "Parking Tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
+      
+    ],
+    exclusions: [
+      "Personal expenses",
+      "meals",
+      "Accommodation Not Included",
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: [
+      "/1day1.jpg", 
+      "/1day2.jpg", 
+      "/1day3.jpg", 
+      "/1day5.jpg"
+    ]
+  },
+  {
+    id: 3,
+    name: "Udawalawa Wildlife Safari",
+    duration: "1 Day", 
+    price: "$250 ",
+    originalPrice: "$300",
+    rating: 4.9,
+    image: "/safari jip.jpg",
+    description: "Udawalawa Safari - 1 Day",
+    highlights: [
+      "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+        
+        
+        
+        "Udawalawa National Park",
+        
+        "Drop your pickup location",
+    ],
+    color: "from-green-600 to-green-700",
+    iconColor: "text-green-600",
+    longDescription: "Udawalawa Safari - 1 Day",
+    groupSize: "2-13 people (Minimum 2 people)",
+    difficulty: "Easy", 
+    bestTime: "Any Months",
+    startLocation: "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+    endLocation: "Drop your pickup location",
+    itinerary: [
+      {
+        day: 1,
+        title: "Udawalawa Wildlife Safari",
+        description: "Udawalawa Safari - 1 Day",
+        activities: [
+          "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+          "Udawalawa Wildlife Safari",
+          
+
+
+          
+          
+          
+        ],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      }
+    ],
+    inclusions: [
+    "Safari Hilux jeep and Udawalawa National Park entrance ticket",
+      
+      "Parking Tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
+      
+    ],
+    exclusions: [
+      "Personal expenses",
+      "meals",
+      "Accommodation Not Included",
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: [
+      "/1day1.jpg", 
+      "/1day2.jpg", 
+      "/1day3.jpg", 
+      "/1day5.jpg"
+    ]
+  },
+  {
+    id: 4,
+    name: "Ella and Sigiriya",
+    duration: "2 Days | 1 Night",
+    price: "$295",
+    originalPrice: "$300",
+    rating: 4.9,
+    image: "/sigiriyaella.png",
+    description: "Ella and Sigiriya",
+    highlights: ["Pick up from Hikkaduwa/Galle/Mirissa","Ella Train ride ",
+        "Rawana Waterfall ",
+        "Nine Arches Bridge ",
+        "spice Garden ",
+        "little Adam's Peak ",
+        "Ambuluwawa tower ",
+        "Sigiriya Rock ",
+        "Dambull Cave Temple ",  "Drop your pickup location"],
+    color: "from-green-500 to-green-600",
+    iconColor: "text-green-600",
+    longDescription: "Experience the best of Sri Lanka with our Ella and Sigiriya tour — a perfect mix of nature and heritage. Wander through Ella’s misty mountains and tea estates, then explore the ancient wonder of Sigiriya Rock Fortress. From scenic landscapes to cultural treasures, this journey promises unforgettable memories in the heart of Sri Lanka. ",
+    groupSize: "2-13 people(Minimum 2 people)",
+    difficulty: "Easy",
+    bestTime: "Any Months",
+    startLocation: "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+    endLocation: "Pickup Location",
+    itinerary: [
+      {
+        day: 1,
+        title: "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
+        description: "Welcome to Sri Lanka! Begin your cultural journey.",
+        activities: ["Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa","Ella","Nine Arch Bridge","Spice Garden","Little Adam's peak", "Train Ride (depend time)","Nuwara Eliya","Over Night Nuwara Eliya Or Kandy",],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      },
+      {
+        day: 2,
+        title: "Nuwara Eliya to Sigiriya",
+        description: "Travel to the Cultural Triangle and explore the magnificent Sigiriya Rock Fortress.",
+        activities: ["Nuwara Eliya Post Office","Haggala or Victoria Botanical Garden","Ramboda Tea Plantation","Ambuluwawa Tower","Over Night Sigiriya",],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      },
+      {
+        day: 3,
+        title: "Sigiriya & Drop your Hotel",
+        description: "Discover ancient cave temples and the medieval capital of Sri Lanka.",
+        activities: ["Sigiriya Rock","Dambulla Cave Temple","Drop Your Pickup Location",],
+        meals: ["Not Including"],
+        accommodation: "Not Including"
+      }
+    ],
+    inclusions: [
+      
+      "Parking Tickets",
+      "Dambulla Cave Temple entrance ticket",
+      "Sigiriya Rock entrance ticket",
+      "Train tickets",
+      "English-speaking guide",
+      "Air-conditioned vehicle",
+    ],
+    exclusions: [
+      "Personal expenses",
+      "meals",
+      "Accommodation Not Included",
+      
+      "Travel insurance",
+      "Alcoholic beverages",
+      "Items not mentioned in inclusions"
+    ],
+    gallery: ["/ride.webp", "/nuwaraeliya2.jpg", "/nuwaraeliyar.jpg", "/nuwaraeliyar.jpg"]
+  },
+  {
+    id: 5,
     name: "Heritage, Natural & Wildlife",
     duration: "3 Days | 2 Nights",
     price: "$560",
@@ -136,7 +394,7 @@ const tourPackagesData: TourPackage[] = [
     gallery: ["/ride.webp", "/nuwaraeliya2.jpg", "/nuwaraeliyar.jpg", "/nuwaraeliyar.jpg"]
   },
   {
-    id: 2,
+    id: 6,
     name: "Heritage and Hill Country tour",
     duration: "4 Days | 3 Nights",
     price: "$730 ",
@@ -248,7 +506,7 @@ const tourPackagesData: TourPackage[] = [
     ],
   },
   {
-    id: 3,
+    id: 7,
     name: "Wildlife Adventure Safari",
     duration: "1 Day", 
     price: "$450 ",
@@ -320,7 +578,7 @@ const tourPackagesData: TourPackage[] = [
     ]
   },
   {
-    id: 4,
+    id: 8,
     name: "Wildlife Adventure Safari Udawalawa",
     duration: "1 Day", 
     price: "$435 ",
@@ -392,10 +650,10 @@ const tourPackagesData: TourPackage[] = [
     ]
   },
   {
-    id: 5,
+    id: 9,
     name: "Galle City Tour",
     duration: "1 Day", 
-    price: "Customize Price",
+    price: "$120",
     originalPrice: "",
     rating: 4.7,
     image: "/gallefort1.jpg",
@@ -405,7 +663,7 @@ const tourPackagesData: TourPackage[] = [
       "Galle Fort", 
       "Koggala Lake Boat Safari",
       "Sea Turtle Hatchery",
-      "Stick Fisherman",
+      "Stick Fishermans",
       "Drop your Pickup Location"
     ],
     color: "from-green-600 to-green-700",
@@ -427,6 +685,8 @@ const tourPackagesData: TourPackage[] = [
       "Enjoy a scenic Koggala Lake Boat Safari",
       "Visit the Sea Turtle Hatchery and learn about conservation",
       "Experience the traditional Stick Fishermen",
+      "Gem Museum",
+      "Spice Garden",
       "Drop-off at your pickup location"
     ],
     meals: ["Not Including"],
@@ -436,11 +696,14 @@ const tourPackagesData: TourPackage[] = [
 ,
     inclusions: [
       "Parking Tickets",
+      "Koggala Lake Boat Safari Tickets",
+      "Sea Turtle Hatchery Entrance Tickets",
       "English-speaking guide",
       "Air-conditioned vehicle",
     ],
     exclusions: [
       "Personal expenses",
+      "Not Including Stick Fishermens Tickets ",
       "meals",
       "Accommodation Not Included",
       "Entrance fees to attractions",
@@ -456,10 +719,10 @@ const tourPackagesData: TourPackage[] = [
     ]
   },
   {
-    id: 6,
+    id: 10,
     name: "Madu River Boart Safari",
     duration: "1 Day", 
-    price: "Customize",
+    price: "$145",
     originalPrice: "",
     rating: 4.7,
     image: "/maduriver.jpg",
@@ -481,7 +744,7 @@ const tourPackagesData: TourPackage[] = [
     title: "Madu River Boat Safari",
     description: "Discover the beauty of Sri Lanka’s southern waterways with a peaceful river cruise and scenic lake safari.",
     activities: [
-      "Pickup from your down-south hotel",
+      "Pickup your hotel Mirissa,Weligama,Unawatuna,Galle,Hikkaduwa",
       "Enjoy a boat safari along the Madu River with mangrove forests and small islands",
       
       "Drop-off at your pickup location"
@@ -494,11 +757,14 @@ const tourPackagesData: TourPackage[] = [
 ,
     inclusions: [
       "Parking Tickets",
+      "Boat Safari Tickets",
+      "Snacks and Water bottles",
       "English-speaking guide",
       "Air-conditioned vehicle",
     ],
     exclusions: [
       "Personal expenses",
+      "Personal Activities",
       "meals",
       "Accommodation Not Included",
       "Entrance fees to attractions",
@@ -514,7 +780,7 @@ const tourPackagesData: TourPackage[] = [
     ]
   },
   {
-    id: 7,
+    id: 11,
     name: "Mirissa Whale Watching",
     duration: "1 Day", 
     price: "Customize",
@@ -576,7 +842,7 @@ const tourPackagesData: TourPackage[] = [
     ]
   },
   {
-    id: 8,
+    id: 12,
     name: "Airport Drop and Pickup",
     duration: "1 Day", 
     price: "Customize",
@@ -794,7 +1060,7 @@ export default function TourDetailPage() {
                     <div className="flex items-center gap-1">
                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                       <span className="font-semibold">{tour.rating}</span>
-                      <span className="text-gray-500 hidden sm:inline">(245 reviews)</span>
+                      <span className="text-gray-500 hidden sm:inline">(345 reviews)</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4 text-gray-500" />
@@ -837,7 +1103,7 @@ export default function TourDetailPage() {
                     <div className="flex items-center gap-1">
                       <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                       <span className="font-semibold">{tour.rating}</span>
-                      <span className="text-gray-500">(245 reviews)</span>
+                      <span className="text-gray-500">(345 reviews)</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock className="w-5 h-5 text-gray-500" />
