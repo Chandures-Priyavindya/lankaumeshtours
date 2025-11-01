@@ -420,7 +420,7 @@ export default function Home() {
     },
     {
       id: 10,
-      name: "Madu River Boart Safari",
+      name: "Madu River Boat Safari",
       duration: "1 Day",
       price: "$145 02 persons",
       originalPrice: "",
