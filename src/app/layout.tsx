@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   keywords: ["Sri Lanka tour packages", "travel Sri Lanka", "Sri Lanka holidays", "custom Sri Lanka tours", "tour operators Sri Lanka", "best Sri Lanka travel deals", "Sri Lanka vacation packages", "Lanka Umesh Tours"],
   authors: [{ name: "Lanka Umesh Tours Team" }],
   openGraph: {
-    title: "Sri Lanka Tour Packages | Best Travel & Holiday Deals - Lanka Umesh Tours",
-    description: "Discover the best Sri Lanka tour packages for unforgettable holidays. Customizable itineraries, expert guides, and great deals on culture, nature, and beach tours across Sri Lanka.",
+    
+    
     url: "https://www.lankaumeshtours.com/", // **MUST UPDATE THIS**
     siteName: "Lanka Umesh Tours",
     type: "website",

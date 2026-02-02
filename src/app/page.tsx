@@ -227,7 +227,7 @@ export default function Home() {
       price: "$180 All Included 02persons",
       originalPrice: "$200",
       rating: 5.0,
-      image: "/Ella.jpg",
+      image: "/images/Ella.jpg",
       description:
         "Discover the breathtaking beauty of Ella — a hill country paradise surrounded by lush tea plantations, misty mountains, and cascading waterfalls.",
       highlights: [
@@ -247,7 +247,7 @@ export default function Home() {
       price: "$260 All Included 02persons",
       originalPrice: "$300",
       rating: 4.7,
-      image: "/tiger.jpg",
+      image: "/images/leopard.jpg",
       description: "Yala Safari - 1 Day",
       highlights: [
         "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",

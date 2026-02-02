@@ -78,7 +78,7 @@ const tourPackagesData: TourPackage[] = [
     price: "$180",
     originalPrice: "$250",
     rating: 5.0,
-    image: "/Ella.jpg",
+    image: "/images/Ella.jpg",
     description: "Discover the breathtaking beauty of Ella — a hill country paradise surrounded by lush tea plantations, misty mountains, and cascading waterfalls.",
     highlights: ["Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa","Train ride","Ravana Water fall","Nine Arch","Spice Garden","Little Adam Peak",  "Drop your pickup location"],
     color: "from-green-500 to-green-600",
@@ -129,7 +129,7 @@ const tourPackagesData: TourPackage[] = [
     price: "$260 ",
     originalPrice: "$300",
     rating: 4.7,
-    image: "/tiger.jpg",
+    image: "/images/leopard.jpg",
     description: "Yala Safari - 1 Day",
     highlights: [
       "Pick up from Hikkaduwa/Galle/Unawatuna/Waligama/Mirissa",
